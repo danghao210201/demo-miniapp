@@ -28,6 +28,7 @@ const router = createBrowserRouter(
           path: "/",
           element: <HomePage />,
         },
+    
         {
           path: "/search",
           element: <SearchResultPage />,
@@ -140,6 +141,7 @@ const router = createBrowserRouter(
           path: "*",
           element: <NotFound />,
         },
+       
       ],
       ErrorBoundary,
     },

@@ -10,7 +10,7 @@ export default function SearchInput({
       className={`flex items-center justify-between rounded-full bg-white relative space-x-1 border border-black/10 ${className ?? ""}`}
     >
       <input
-        placeholder="Tìm bệnh, bác sĩ, thuốc..."
+        placeholder="Bạn muốn tìm gì?"
         className="placeholder:text-disabled text-sm pl-[34px] h-[34px] flex-1 rounded-full outline-none"
         required
         name="keyword"

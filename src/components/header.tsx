@@ -5,7 +5,7 @@ import { BackIcon } from "./icons/back";
 import { customTitleState, userState } from "@/state";
 import { getConfig } from "@/utils/miscellaneous";
 import HeaderShieldIcon from "./icons/header-shield";
-
+import quochuy from "@/static/quochuy.png";
 function ProfileHeader() {
   const { userInfo } = useAtomValue(userState);
 
@@ -47,11 +47,17 @@ export default function Header() {
                 <ProfileHeader />
               ) : (
                 <div className="flex items-center text-primary space-x-1.5">
+                  <img
+                    src={quochuy}
+                    alt="icon"
+                    style={{ width: 35, height: 35 }}
+                    className="mr-2"
+                  />
                   <h1 className="text-xl font-bold">
                     {getConfig((c) => c.app.title)}
                   </h1>
-                  <span>|</span>
-                  <span className="text-base">Chào bạn</span>
+                  {/* <span>|</span>
+                  <span className="text-base">Chào bạn</span> */}
                 </div>
               )}
             </div>
