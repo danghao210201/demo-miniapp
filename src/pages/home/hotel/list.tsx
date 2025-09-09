@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import SearchInput from "@/components/form/search";
-import data from "@/components/mock/nhahang.json";
+import data from "@/components/mock/hotel.json";
 import TransitionLink from "@/components/transition-link";
 
 /**
@@ -12,7 +12,7 @@ import TransitionLink from "@/components/transition-link";
  *   + Wrapper: flex-1 flex-col overflow-hidden (giữ 1 vùng cuộn duy nhất)
  *   + List container: flex-1 overflow-y-auto (vùng cuộn chính)
  */
-export default function RestaurantListPage() {
+export default function HotelListPage() {
   // Từ khóa tìm kiếm
   const [keyword, setKeyword] = useState("");
 
@@ -61,7 +61,7 @@ export default function RestaurantListPage() {
         {items.map((r: any, idx) => (
           <TransitionLink
             key={idx}
-            to={`/restaurants/${r._index}`}
+            to={`/hotel/${r._index}`}
             className="block bg-white rounded-2xl shadow-sm border border-black/5 overflow-hidden"
           >
             {/* Ảnh cover 16:9 */}

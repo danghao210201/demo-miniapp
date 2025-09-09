@@ -1,0 +1,67 @@
+[
+  {
+    "id": "PA001",
+    "hoTen": "Nguyễn Văn An",
+    "soDienThoai": "0901234567",
+    "thoiGianGui": "2025-07-25T09:15:00",
+    "tieuDe":"Đèn giao thông tại ngã tư Trần Hưng Đạo",
+    "noiDung": "Đèn giao thông tại ngã tư Trần Hưng Đạo – Nguyễn Chí Thanh bị hỏng, gây nguy hiểm cho người tham gia giao thông.",
+    "hinhAnh":"https://baotayninh.vn/image/fckeditor/upload/2023/20230120/images/dsc00868-jpg.jpg",
+    "phanHoi": {
+      "noiDung": "Chúng tôi đã ghi nhận và sẽ cử đội kỹ thuật kiểm tra trong hôm nay.",
+      "thoiGianPhanHoi": "2025-07-25T14:40:00"
+    }
+  },
+  {
+    "id": "PA002",
+    "hoTen": "Trần Thị Bích",
+    "soDienThoai": "0912345678",
+    "thoiGianGui": "2025-07-24T16:00:00",
+    "tieuDe":"Rác thải sinh hoạt",
+    "noiDung": "Rác thải sinh hoạt trên đường Lý Thường Kiệt không được thu gom thường xuyên.",
+    "hinhAnh":"https://media-cdn-v2.laodong.vn/storage/newsportal/2018/9/28/633373/9-1_Opt.jpg",
+    "phanHoi": {
+      "noiDung": "Chúng tôi đã làm việc với đơn vị vệ sinh để tăng tần suất thu gom rác tại khu vực này.",
+      "thoiGianPhanHoi": "2025-07-25T08:30:00"
+    }
+  },
+  {
+    "id": "PA003",
+    "hoTen": "Lê Văn Hùng",
+    "soDienThoai": "0923456789",
+    "thoiGianGui": "2025-07-22T13:20:00",
+    "tieuDe":"Cống thoát nước",
+    "noiDung": "Cống thoát nước trước nhà số 45 đường Lê Lợi bị nghẹt gây ngập úng.",
+    "hinhAnh":"https://baokhanhhoa.vn/file/e7837c02857c8ca30185a8c39b582c03/dataimages/201810/original/images5345621_Nap_cong_thoat_nuoc_tiep_tuc_bi_mat_1.jpg",
+    "phanHoi": {
+      "noiDung": "Đã cử công nhân đến thông cống trong chiều ngày 22/07.",
+      "thoiGianPhanHoi": "2025-07-22T17:45:00"
+    }
+  },
+  {
+    "id": "PA004",
+    "hoTen": "Phạm Minh Tuấn",
+    "soDienThoai": "0934567890",
+    "thoiGianGui": "2025-07-20T10:50:00",
+    "tieuDe":"Tiếng ồn",
+    "noiDung": "Tiếng ồn từ quán karaoke gây ảnh hưởng đến sinh hoạt.",
+    "hinhAnh":"https://baotayninh.vn/image/fckeditor/upload/2019/20190223/images/xu%20ly_1.jpg",
+    "phanHoi": {
+      "noiDung": "Đã kiểm tra và nhắc nhở chủ cơ sở, yêu cầu thực hiện đúng quy định về tiếng ồn.",
+      "thoiGianPhanHoi": "2025-07-20T16:10:00"
+    }
+  },
+  {
+    "id": "PA005",
+    "hoTen": "Đỗ Thị Mai",
+    "soDienThoai": "0945678901",
+    "thoiGianGui": "2025-07-19T08:30:00",
+    "tieuDe":"Cột điện",
+    "noiDung": "Cột điện trước nhà số 102 Trưng Nữ Vương nghiêng, có nguy cơ đổ ngã.",
+    "hinhAnh":"https://dungquangha.com/wp-content/uploads/2023/11/cot-dien-truoc-cua-nha-3.png",
+    "phanHoi": {
+      "noiDung": "Cột điện đã được gia cố lại trong ngày 19/07 để đảm bảo an toàn.",
+      "thoiGianPhanHoi": "2025-07-19T14:00:00"
+    }
+  }
+]

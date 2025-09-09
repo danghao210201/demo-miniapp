@@ -18,6 +18,13 @@ import { ErrorBoundary } from "./components/error-boundary";
 import DepartmentDetailPage from "./pages/detail/department";
 import NewsPage from "./pages/news";
 import RestaurantListPage from "./pages/home/restaurants/list";
+import RestaurantDetailPage from "./pages/home/restaurants/detail";
+import DanhSachPhanAnh from "./pages/home/kiennghi/danhsachphananh";
+import ChiTietPhanAnh from "./pages/home/kiennghi/chitietphananh";
+import GuiPhanAnh from "./pages/home/kiennghi/guiphananh";
+import PhanAnhDaGui from "./pages/home/kiennghi/phananhdagui";
+import HotelListPage from "./pages/home/hotel/list";
+import HotelDetailPage from "./pages/home/hotel/detail";
 
 const router = createBrowserRouter(
   [
@@ -29,7 +36,7 @@ const router = createBrowserRouter(
           path: "/",
           element: <HomePage />,
         },
-    
+
         {
           path: "/search",
           element: <SearchResultPage />,
@@ -151,6 +158,73 @@ const router = createBrowserRouter(
             noScroll: true,
           },
         },
+        {
+          path: "/restaurants/:index",
+          element: <RestaurantDetailPage />,
+          handle: {
+            back: true,
+            title: "Thông tin chi tiết",
+            noScroll: true,
+          },
+        },
+          {
+          path: "/hotel/list",
+          element: <HotelListPage />,
+          handle: {
+            back: true,
+            title: "Khách sạn",
+            noScroll: true,
+          },
+        },
+        {
+          path: "/hotel/:index",
+          element: <HotelDetailPage />,
+          handle: {
+            back: true,
+            title: "Thông tin chi tiết",
+            noScroll: true,
+          },
+        },
+        {
+          path: "/kiennghi/danhsachphananh",
+          element: <DanhSachPhanAnh />,
+          handle: {
+            back: true,
+            title: "Kiến nghị - Phản ánh",
+            noScroll: true,
+          },
+        },
+
+        {
+          path: "/kiennghi/chitietphananh",
+          element: <ChiTietPhanAnh />,
+          handle: {
+            back: true,
+            title: "Chi tiết",
+            noScroll: true,
+          },
+        },
+
+        {
+          path: "/kiennghi/guiphananh",
+          element: <GuiPhanAnh />,
+          handle: {
+            back: true,
+            title: "Gửi Kiến nghị - Phản ánh",
+            noScroll: true,
+          },
+        },
+
+        {
+          path: "/kiennghi/phananhdagui",
+          element: <PhanAnhDaGui />,
+          handle: {
+            back: true,
+            title: "Kiến nghị - Phản ánh đã gửi",
+            noScroll: true,
+          },
+        },
+
       ],
       ErrorBoundary,
     },

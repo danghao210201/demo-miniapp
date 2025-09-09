@@ -46,7 +46,7 @@
                 "idcha": 7,
                 "name": "Khách sạn",
                 "icon": "/src/static/image/khachsan.png",
-                "page": "/dulich/khachsan"
+                "page": "/hotel/list"
             },
             {
                 "id": 10,
@@ -75,7 +75,8 @@
                 "idcha": 13,
                 "name": "Kiến nghị - Phản ánh",
                 "icon": "/src/static/image/phananh.png",
-                "page": "/phananhkiennghi/phananh"
+                "page": "/kiennghi/danhsachphananh"
+
             },
             {
                 "id": 15,
