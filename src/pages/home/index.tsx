@@ -5,14 +5,17 @@ import FeaturedServices from './featured-services';
 import RemoteDiagnosis from './remote-diagnosis';
 import HealthNews from './health-news';
 import { Page, Box, Avatar, Text, Icon } from "zmp-ui";
+import FeaturedDacSan from './featured-dacsan';
+import FeaturedNhaHang from './featured-nhahang';
+import FeaturedHotel from './featured-hotel';
 
 function HomePage() {
   return (
     <>
       {/* <SearchBar className="mx-4" /> */}
       {/* <QuickActions /> */}
-      
-       <Box
+
+      <Box
         px={5}
         py={3}
         style={{
@@ -25,11 +28,15 @@ function HomePage() {
           width: "100%",
         }}
       >
-      <ServiceMenu />
+        <ServiceMenu />
       </Box>
       <FeaturedServices />
-      <RemoteDiagnosis />
+      <FeaturedDacSan />
+      <FeaturedNhaHang />
+      <FeaturedHotel />
+      {/* <RemoteDiagnosis /> */}
       <HealthNews />
+
     </>
   );
 }

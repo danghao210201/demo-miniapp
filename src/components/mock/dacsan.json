@@ -1,0 +1,92 @@
+[
+    {
+        "TenDiaDiem": "Muối tôm Tây Ninh",
+        "DiaChi": "Cơ sở Muối Tôm Như Bình, 90 Nguyễn Văn Rốp, TP. Tây Ninh",
+        "ViTriMap": {
+            "lat": 11.3105,
+            "lng": 106.0983
+        },
+        "LinkVR360": "https://example.com/vr360/muoi-tom",
+        "NoiDung": "Hỗn hợp muối hột rang, tôm khô, ớt và tỏi; mặn – cay – thơm đặc trưng, chấm trái cây, bánh tráng hoặc nêm món ăn. Đây là gia vị nổi tiếng nhất Tây Ninh.",
+        "GioMoCua": "07:00 - 21:00",
+        "LichHoatDong": "Thứ 2 - Chủ nhật",
+        "Hotline": "+84 98 765 4321",
+        "HinhAnh": [
+            "https://baotayninh.vn/image/fckeditor/upload/2022/20220809/images/ph%C6%A1i%20mu%E1%BB%91i%20%E1%BB%9Bt(1).jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP51eQs197awk4WzHLeA-_rlFBpM_vF-P6Qrb6OHim69Lcq40KsGG-yPFtDcIZXdxJwjY&usqp=CAU",
+            "https://cdn.tgdd.vn/2022/03/CookRecipe/Avatar/muoi-tom-tay-ninh-thumbnail.jpg"
+        ]
+    },
+    {
+        "TenDiaDiem": "Bánh tráng muối Tây Ninh",
+        "DiaChi": "Bánh Tráng Trảng Bàng Út Tròn, 112 Huỳnh Công Giản, TP. Tây Ninh",
+        "ViTriMap": {
+            "lat": 11.3167,
+            "lng": 106.1000
+        },
+        "LinkVR360": "https://example.com/vr360/banh-trang-muoi",
+        "NoiDung": "Các biến thể snack từ bánh tráng: nướng giòn hoặc trộn với muối, me, sa tế; là món ăn vặt gây nghiện giới trẻ.",
+        "GioMoCua": "08:00 - 20:00",
+        "LichHoatDong": "Thứ 2 - Chủ nhật",
+        "Hotline": "+84 97 222 8899",
+        "HinhAnh": [
+            "https://baotayninh.vn/image/fckeditor/upload/2022/20220507/images/13_banh%20trang%201.JPG",
+            "https://mms.img.susercontent.com/vn-11134513-7r98o-lsv3jbgz1tw949@resize_ss1242x600!@crop_w1242_h600_cT",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyhaPIdOlh-nADXpLS9eSYRo_hqT0HejMRJyM_Yr2Lb7ueg8MVfJA4YeKted190h9ImsI&usqp=CAU"
+        ]
+    },
+    {
+        "TenDiaDiem": "Bánh tráng phơi sương",
+        "DiaChi": "Làng nghề Bánh Tráng Phơi Sương Trảng Bàng, huyện Trảng Bàng, Tây Ninh",
+        "ViTriMap": {
+            "lat": 11.0722,
+            "lng": 106.3600
+        },
+        "LinkVR360": "https://example.com/vr360/banh-trang-phoi-suong",
+        "NoiDung": "Bánh tráng được tráng từ gạo mới, phơi qua sương ban đêm để tạo độ dẻo, thơm; dùng cuốn rau sống, thịt luộc hoặc chấm mắm nêm. Đây là tinh hoa ẩm thực Trảng Bàng.",
+        "GioMoCua": "07:00 - 18:00",
+        "LichHoatDong": "Thứ 2 - Chủ nhật",
+        "Hotline": "+84 276 3824 567",
+        "HinhAnh": [
+            "https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/09_2022/banh-trang-phoi-suong-tay-ninh-mot.jpg",
+            "https://badenmountain.sunworld.vn/wp-content/uploads/2024/01/banh-trang-phoi-suong-tay-ninh-15.jpg",
+            "https://dichvuhutchankhong.vn/wp-content/uploads/2024/01/cach-bao-quan-banh-trang-phoi-suong.jpg"
+        ]
+    },
+    {
+        "TenDiaDiem": "Bánh canh Trảng Bàng",
+        "DiaChi": "Bánh Canh Trảng Bàng Năm Dung, QL22, Trảng Bàng, Tây Ninh",
+        "ViTriMap": {
+            "lat": 11.0700,
+            "lng": 106.3600
+        },
+        "LinkVR360": "https://example.com/vr360/banh-canh-trang-bang",
+        "NoiDung": "Tô bánh canh với nước lèo trong, ngọt từ xương hầm lâu; ăn kèm thịt chân giò, gan, hành lá. Đây là món ăn trứ danh Tây Ninh.",
+        "GioMoCua": "06:00 - 21:00",
+        "LichHoatDong": "Thứ 2 - Chủ nhật",
+        "Hotline": "+84 91 444 5566",
+        "HinhAnh": [
+            "https://mia.vn/media/uploads/blog-du-lich/ghe-banh-canh-trang-bang-hoang-minh-thuong-thuc-dac-san-tay-ninh-dung-dieu-03-1661905683.jpeg",
+            "https://sgtourism.vn/wp-content/uploads/2024/03/quan-banh-canh-trang-bang-nam-dung-tay-ninh.jpg",
+            "https://badenmountain.sunworld.vn/wp-content/uploads/2024/03/4-nuoc-dung-banh-canh-trang-bang.png"
+        ]
+    },
+    {
+        "TenDiaDiem": "Nem bưởi Tây Ninh",
+        "DiaChi": "Nem Bưởi Cô Ba, 65 Phạm Văn Đồng, TP. Tây Ninh",
+        "ViTriMap": {
+            "lat": 11.3200,
+            "lng": 106.1100
+        },
+        "LinkVR360": "https://example.com/vr360/nem-buoi",
+        "NoiDung": "Món chay làm từ đu đủ xanh bào và vỏ bưởi phơi khô, nêm tiêu, khế chua, ớt. Nem có màu đỏ như nem thịt, vị thơm lạ miệng.",
+        "GioMoCua": "07:00 - 19:00",
+        "LichHoatDong": "Thứ 2 - Chủ nhật",
+        "Hotline": "+84 93 555 7788",
+        "HinhAnh": [
+            "https://sgtourism.vn/wp-content/uploads/2024/03/dia-chi-mua-nem-buoi-tay-ninh-uy-tin.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk1ILJoZR3gYu1qILYEXCwPr5GvZRuqyqQanUWQ5UrzReQbaICjK7ptQxcvfqH7X214sM&usqp=CAU",
+            "https://baotayninh.vn/image/fckeditor/upload/2022/20221218/images/1671268101-am-thuc-chay-320210515103751_0312100.jpg"
+        ]
+    }
+]

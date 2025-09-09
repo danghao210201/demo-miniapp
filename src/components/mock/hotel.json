@@ -1,0 +1,93 @@
+[
+  {
+    "TenDiaDiem": "Meliá Vinpearl Tây Ninh",
+    "DiaChi": "90 Lê Duẩn, Phường 3, TP. Tây Ninh",
+    "ViTriMap": { "lat": 11.3126, "lng": 106.0988 },
+    "LinkVR360": "https://example.com/vr360/melia-vinpearl-tay-ninh",
+    "NoiDung": "Khách sạn 5★ trung tâm thành phố, phòng rộng nhìn toàn cảnh, hồ bơi, gym, nhà hàng quốc tế; phù hợp công tác & nghỉ dưỡng.",
+    "GioMoCua": "00:00 - 24:00",
+    "LichHoatDong": "Thứ 2 - Chủ nhật",
+    "Hotline": "0276 3 888 999",
+    "HinhAnh": [
+      "https://statics.vinpearl.com/gia-phong-vinpearl-tay-ninh-1.jpg",
+      "https://dam.melia.com/melia/file/NExYYzcBFztgYgc2coya.jpg?im=RegionOfInterestCrop=(1500,1001),regionOfInterest=(1771.5,1181.5)",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/417194613.jpg?k=1a2df01be631f67f98e28758b860f74fcdbf78f616e1035bf3eea82a412e7ea9&o=&hp=1"
+    ]
+  },
+  {
+    "TenDiaDiem": "Sunrise Hotel Tây Ninh",
+    "DiaChi": "81 Hoàng Lê Kha, Phường 3, TP. Tây Ninh",
+    "ViTriMap": { "lat": 11.3135, "lng": 106.1041 },
+    "LinkVR360": "https://example.com/vr360/sunrise-hotel",
+    "NoiDung": "Khách sạn 4★, thiết kế hiện đại, có phòng hội nghị, nhà hàng Á–Âu, vị trí thuận tiện di chuyển đến các điểm tham quan.",
+    "GioMoCua": "00:00 - 24:00",
+    "LichHoatDong": "Thứ 2 - Chủ nhật",
+    "Hotline": "0276 3 666 888",
+    "HinhAnh": [
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/95138867.jpg?k=a56bca3478eab25798d347208bfad3de5e612fe8b5944e7fda53cfba813f4a26&o=&hp=1",
+      "https://sunrisehotel.com.vn/wp-content/uploads/2018/04/Deluxe-1-750x660.png",
+      "https://sunrisehotel.com.vn/wp-content/uploads/2020/03/IMG_3641-750x660.jpg"
+    ]
+  },
+  {
+    "TenDiaDiem": "Victory Hotel Tây Ninh",
+    "DiaChi": "255 30/4, Phường 2, TP. Tây Ninh",
+    "ViTriMap": { "lat": 11.3079, "lng": 106.1007 },
+    "LinkVR360": "https://example.com/vr360/victory-hotel",
+    "NoiDung": "Khách sạn 3★, phòng gọn gàng, đầy đủ tiện nghi, giá hợp lý; thích hợp lưu trú ngắn ngày.",
+    "GioMoCua": "00:00 - 24:00",
+    "LichHoatDong": "Thứ 2 - Chủ nhật",
+    "Hotline": "0276 3 556 778",
+    "HinhAnh": [
+      "https://q-xx.bstatic.com/xdata/images/hotel/max500/182092049.jpg?k=45fffbae791e10c7497a9320c5fc7cdd3c7b6cfceaed847218461e62b9a8cdbd&o=",
+      "https://victoryhoteltayninh.com/wp-content/uploads/2018/04/Prenium-standard-6-600x370.jpg",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/182091922.jpg?k=b0744b3df2a6a922cfd7d030bd98845691850f26836796789a09b705fd19a493&o=&hp=1"
+    ]
+  },
+  {
+    "TenDiaDiem": "Khách sạn Maison Camellia",
+    "DiaChi": "168 Cách Mạng Tháng 8, Phường 1, TP. Tây Ninh",
+    "ViTriMap": { "lat": 11.3153, "lng": 106.1035 },
+    "LinkVR360": "https://example.com/vr360/my-my-hotel",
+    "NoiDung": "Khách sạn 2–3★, phòng sạch sẽ, dịch vụ cơ bản, giá tiết kiệm; gần khu ăn uống địa phương.",
+    "GioMoCua": "00:00 - 24:00",
+    "LichHoatDong": "Thứ 2 - Chủ nhật",
+    "Hotline": "0276 3 889 668",
+    "HinhAnh": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThuhZCuPr1-5peklBydAKOxAr3TZHOp9v49A&s",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/639354187.jpg?k=45c3e24bb9691af96bd052c32e32fac8de0124d0ae9629e4606bbaf363f46801&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/639343163.jpg?k=71aaaf4e452d7ceec4260fd8e6ec4f8b6e8cad347379ec4b2ba90db1af60e68e&o=&hp=1"
+    ]
+  },
+  {
+    "TenDiaDiem": "Homestay Núi Bà Garden",
+    "DiaChi": "Đường lên khu du lịch Núi Bà Đen, Phường Ninh Sơn, TP. Tây Ninh",
+    "ViTriMap": { "lat": 11.3605, "lng": 106.1465 },
+    "LinkVR360": "https://example.com/vr360/nuiba-garden",
+    "NoiDung": "Homestay sân vườn gần cáp treo Núi Bà, phòng tập thể & phòng đôi, có khu BBQ và cho thuê xe máy.",
+    "GioMoCua": "00:00 - 24:00 (nhận phòng 14:00, trả 12:00)",
+    "LichHoatDong": "Thứ 2 - Chủ nhật",
+    "Hotline": "0938 123 456",
+    "HinhAnh": [
+      "https://motogo.vn/wp-content/uploads/2023/05/homestay-tay-ninh-35.jpg",
+      "https://motogo.vn/wp-content/uploads/2023/05/homestay-tay-ninh-25.jpg",
+      "https://pystravel.vn/uploads/posts/albums/4844/0faf5f1710c4521dbf2477ac12d81a21.jpg"
+    ]
+  },
+  {
+    "TenDiaDiem": "An Nhiên Homestay",
+    "DiaChi": "Ấp Ninh Hòa, Xã Bàu Năng, H. Dương Minh Châu, Tây Ninh",
+    "ViTriMap": { "lat": 11.3308, "lng": 106.0473 },
+    "LinkVR360": "https://example.com/vr360/an-nhien-homestay",
+    "NoiDung": "Không gian mộc mạc, gần hồ Dầu Tiếng; có xe đạp, bếp dùng chung, hoạt động cắm trại cuối tuần.",
+    "GioMoCua": "00:00 - 24:00 (nhận phòng 14:00, trả 12:00)",
+    "LichHoatDong": "Thứ 2 - Chủ nhật",
+    "Hotline": "0977 456 321",
+    "HinhAnh": [
+      "https://homestay.review/wp-content/uploads/2018/11/Bien-hieu-an-tuong-cua-Homestay.jpg",
+      "https://motogo.vn/wp-content/uploads/2023/05/homestay-tay-ninh-26.jpg",
+      "https://toptayninh.vn/wp-content/uploads/2023/05/z5296497035454_40d9b05c899147c3d63c341222dfff92.jpg"
+    ]
+  }
+ 
+]

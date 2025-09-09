@@ -33,7 +33,7 @@ export default function HealthNews() {
   return (
     <Section
       className="py-4 space-y-3"
-      title="Tin tức sức khỏe"
+      title="Tin tức"
       viewMore="/explore"
     >
       <NewsItem {...a1} />

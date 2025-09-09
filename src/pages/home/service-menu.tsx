@@ -1,33 +1,156 @@
-import hospital from "@/static/services/hospital.svg";
-import lung from "@/static/services/lung.svg";
-import drug from "@/static/services/drug.svg";
-import invoice from "@/static/services/invoice.svg";
-import all from "@/static/services/all.svg";
-import ServiceItem from "@/components/items/service";
-import bocso from "@/static/icon/bocso.png";
-import checkin from "@/static/icon/checkin.png";
-import hotel from "@/static/icon/hotel.png";
-import hotline from "@/static/icon/hotline.png";
-import lichsuvanhoa from "@/static/icon/lichsuvanhoa.png";
-import news from "@/static/icon/news.png";
-import thutuc from "@/static/icon/thutuc.png";
-import tracuuhs from "@/static/icon/tracuuhs.png";
-import kiennghi from "@/static/icon/recommend.png";
-import sanpham from "@/static/icon/sanpham.png";
+import React, { useState } from 'react';
+import TransitionLink from '@/components/transition-link';
+import categoriesData from '@/components/mock/categories.json';
 
-export default function ServiceMenu() {
+// Interface cho dữ liệu category
+interface Subcategory {
+  id: number;
+  idcha: number;
+  name: string;
+  icon: string;
+  page?: string;
+  url?: string;
+}
+
+interface Category {
+  id: number;
+  name: string;
+  icon: string;
+  subcategories?: Subcategory[];
+}
+
+// Component popup hiển thị subcategories
+function SubcategoryPopup({ 
+  category, 
+  isOpen, 
+  onClose 
+}: { 
+  category: Category | null; 
+  isOpen: boolean; 
+  onClose: () => void; 
+}) {
+  if (!isOpen || !category) return null;
+
   return (
-    <div className="bg-white bg-opacity-80 grid grid-cols-3 gap-4 p-4 rounded-xl drop-shadow-xl">
-      <ServiceItem to="/" icon={hotel} label="Nhà hàng - Khách sạn" />
-      <ServiceItem to="/categories" icon={lichsuvanhoa} label="Lịch sử - Văn hoá" />
-      {/* <ServiceItem icon={drug} label="Toa thuốc" /> */}
-      <ServiceItem to="/invoices" icon={kiennghi} label="Kiến nghị - Phản ánh" />
-      <ServiceItem to="/services" icon={bocso} label="Bốc số từ xa" />
-      <ServiceItem to="https://dichvucong.gov.vn/p/home/dvc-tra-cuu-ho-so.html" icon={tracuuhs} label="Tra cứu hồ sơ" />
-      <ServiceItem to="https://thutuc.dichvucong.gov.vn/p/home/dvc-tthc-trang-chu.html" icon={thutuc} label="Thủ tục hành chính" />
-      <ServiceItem to="/invoices" icon={sanpham} label="Sản phẩm địa phương" />
-      <ServiceItem to="/services" icon={news} label="Thông tin từ chính quyền" />
-      <ServiceItem to="https://dichvucong.gov.vn/p/home/dvc-tra-cuu-ho-so.html" icon={hotline} label="Đường dây nóng" />
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={onClose}>
+      <div className="bg-white rounded-xl p-6 m-4 max-w-md w-full max-h-96 overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-lg font-semibold">{category.name}</h3>
+          <button 
+            onClick={onClose}
+            className="text-gray-500 hover:text-gray-700 text-xl font-bold"
+          >
+            ×
+          </button>
+        </div>
+        
+        {category.subcategories && category.subcategories.length > 0 ? (
+          <div className="grid grid-cols-3 gap-3">
+            {category.subcategories.map((subcategory) => {
+              const content = (
+                <div className="flex flex-col items-center space-y-2 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <div className="h-10 w-10 flex items-center justify-center">
+                    <img src={subcategory.icon} alt={subcategory.name} className="h-8 w-8" />
+                  </div>
+                  <span className="text-xs font-medium text-center">{subcategory.name}</span>
+                </div>
+              );
+              
+              if (subcategory.url) {
+                return (
+                  <a 
+                    key={subcategory.id}
+                    href={subcategory.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    {content}
+                  </a>
+                );
+              } else if (subcategory.page) {
+                return (
+                  <TransitionLink key={subcategory.id} to={subcategory.page}>
+                    {content}
+                  </TransitionLink>
+                );
+              }
+              
+              return (
+                <div key={subcategory.id} className="cursor-not-allowed opacity-50">
+                  {content}
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <p className="text-gray-500 text-center py-4">Chưa có dịch vụ con</p>
+        )}
+      </div>
     </div>
+  );
+}
+
+// Component item cho category
+function CategoryItem({ 
+  category, 
+  onClick 
+}: { 
+  category: Category; 
+  onClick: () => void; 
+}) {
+  return (
+    <button 
+      onClick={onClick}
+      className="flex flex-col items-center space-y-2 p-2 rounded-lg hover:bg-gray-50 transition-colors"
+    >
+      <div className="h-9 w-9 flex items-center justify-center">
+        <img src={category.icon} alt={category.name} className="h-8 w-8" />
+      </div>
+      <div className="text-xs text-center w-full">{category.name}</div>
+    </button>
+  );
+}
+
+/**
+ * Component ServiceMenu - Hiển thị menu dịch vụ với popup cho subcategories
+ * Sử dụng dữ liệu từ categories.json
+ */
+export default function ServiceMenu() {
+  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  
+  // Xử lý khi click vào category
+  const handleCategoryClick = (category: Category) => {
+    if (category.subcategories && category.subcategories.length > 0) {
+      setSelectedCategory(category);
+      setIsPopupOpen(true);
+    }
+  };
+  
+  // Đóng popup
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+    setSelectedCategory(null);
+  };
+  
+  return (
+    <>
+      <div className="bg-white bg-opacity-80 grid grid-cols-3 gap-4 p-4 rounded-xl drop-shadow-xl">
+        {categoriesData.map((category) => (
+          <CategoryItem 
+            key={category.id}
+            category={category}
+            onClick={() => handleCategoryClick(category)}
+          />
+        ))}
+      </div>
+      
+      <SubcategoryPopup 
+        category={selectedCategory}
+        isOpen={isPopupOpen}
+        onClose={handleClosePopup}
+      />
+    </>
   );
 }

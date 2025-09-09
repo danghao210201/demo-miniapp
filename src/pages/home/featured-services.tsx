@@ -1,56 +1,72 @@
-import ArrowRightIcon from "@/components/icons/arrow-right";
-import ServiceHighlight from "./service-highlight";
-import xoaCan from "@/static/doctor-xoa-can.png";
-import triNam from "@/static/doctor-tri-nam.png";
-import giamCan from "@/static/doctor-giam-can.png";
 import Section from "@/components/section";
+import { Text, Icon } from "zmp-ui";
+import checkInHotData from "@/components/mock/checkinhot.json";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+const { Title } = Text;
 
+/**
+ * Component hiển thị danh sách các địa danh du lịch nổi tiếng ở dạng slider cover
+ * - Cho thấy ~1/2 slide tiếp theo bằng slidesPerView=1.5
+ * - Ảnh cover 16:9 với overlay gradient và text overlay
+ * - Sử dụng Swiper với autoplay, loop và pagination
+ */
 export default function FeaturedServices() {
+  // Lấy 4 địa danh đầu tiên để hiển thị
+  const featuredSites = checkInHotData.slice(0, 4);
+
   return (
     <Section
       className="pt-5"
-      title="Dịch vụ nổi bật"
+      title="Địa danh nổi tiếng"
       viewMore="/services"
-      isCard
     >
-      <div className="grid grid-cols-2 gap-2.5">
-        <div className="relative flex flex-col items-start gap-1 bg-cover bg-center">
-          <ServiceHighlight
-            title="Giảm cân"
-            subtitle="Làm đẹp"
-            to="/service/1"
-            cta={
-              <button
-                className="mt-2 flex w-fit items-center justify-center rounded-full px-1.5 py-0.5"
-                style={{
-                  background: "linear-gradient(89deg, #286bab, #77acdf)",
-                }}
-              >
-                <span className="text-4xs text-white">XEM</span>
-                <ArrowRightIcon width={10} height={10} color="white" />
-              </button>
-            }
-            className="bg-[linear-gradient(132deg,_#F3F9FF_1.29%,_#E2EEFF_96.9%)] [&>.title]:text-[#286BAB] [&>.image]:w-[100px]"
-            image={giamCan}
-          />
-        </div>
-        <div className="flex flex-col gap-2.5">
-          <ServiceHighlight
-            title="Xóa cận"
-            to="/service/2"
-            subtitle="Nhãn khoa"
-            className="bg-[linear-gradient(145deg,_#BBFCFE_1.2%,_#8CF5F9_95.96%)] [&>.title]:text-[#0F777D]"
-            image={xoaCan}
-          />
-          <ServiceHighlight
-            title="Trị nám"
-            to="/service/3"
-            subtitle="Da liễu"
-            className="bg-[linear-gradient(147deg,_#FFF9E8_3.11%,_#FAEECC_95.24%)] [&>.title]:text-[#D9861C]"
-            image={triNam}
-          />
-        </div>
-      </div>
+      <br/>
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        spaceBetween={16}
+        slidesPerView={1.5}
+        centeredSlides={false}
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        loop
+        pagination={{ clickable: true }}
+      >
+        {featuredSites.map((site, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative rounded-xl overflow-hidden">
+              <div className="aspect-[16/9] relative w-full">
+                <img
+                  src={site.HinhAnh[0]}
+                  alt={site.TenDiaDiem}
+                  className="absolute w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback image nếu không load được
+                    e.currentTarget.src =
+                      "https://via.placeholder.com/600x338/e5e7eb/6b7280?text=" +
+                      encodeURIComponent(site.TenDiaDiem);
+                  }}
+                />
+              </div>
+              {/* Overlay gradient dưới đáy ảnh để tăng độ tương phản chữ */}
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/70 to-transparent" />
+              {/* Nội dung chồng lên ảnh - giảm padding-bottom để text thấp hơn */}
+              <div className="absolute bottom-0 left-0 right-0 px-4 pt-4 pb-2 z-10">
+                <Title size="small" className="mb-1 text-white font-bold drop-shadow">
+                  {site.TenDiaDiem}
+                </Title>
+                <div className="flex items-start gap-2 text-white">
+                  <Icon className="text-white mt-0.5 flex-shrink-0" icon="zi-location-solid" size={14} />
+                  <span className="text-white/90 text-sm leading-relaxed line-clamp-2 drop-shadow">
+                    {site.DiaChi}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </Section>
   );
 }

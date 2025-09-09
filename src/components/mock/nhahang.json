@@ -1,0 +1,47 @@
+[
+  {
+    "TenDiaDiem": "Nhà hàng sinh thái Phước Lạc Viên",
+    "DiaChi": "482 Điện Biên Phủ, KP. Hiệp Thạnh, Phường Hiệp Ninh, TP. Tây Ninh",
+    "ViTriMap": { "lat": 11.3160, "lng": 106.1000 },
+    "LinkVR360": "",
+    "NoiDung": "Nhà hàng sinh thái, thiết kế không gian mở như nhà rường Huế, nhiều cây xanh, hồ cá. Chuyên các món chay gia đình thanh tịnh.",
+    "GioMoCua": "08:00 - 23:00",
+    "LichHoatDong": "Thứ 2 - Chủ nhật",
+    "Hotline": "0912 150 552",
+    "HinhAnh": [
+      "https://mia.vn/media/uploads/blog-du-lich/ghe-nha-hang-sinh-thai-lac-vien-hoa-minh-vao-khong-gian-xanh-mat-02-1662487327.jpg",
+      "https://www.tourdulichbentre.com/images/stories/virtuemart/product/phuoc-lac-vien-tay-ninh.jpg",
+      "https://i.ytimg.com/vi/16ODSO9YI7w/maxresdefault.jpg"
+    ]
+  },
+  {
+    "TenDiaDiem": "Nhà hàng bò tơ Út Khương",
+    "DiaChi": "Số 24, đường Ba Tháng Hai, TP. Tây Ninh",
+    "ViTriMap": { "lat": 11.3200, "lng": 106.1100 },
+    "LinkVR360": "",
+    "NoiDung": "Chuyên các món từ bò tơ Tây Ninh (lẩu, hấp, nướng, gỏi). Thịt mềm, ngọt tự nhiên, không gian rộng, giá bình dân.",
+    "GioMoCua": "10:00 - 22:00",
+    "LichHoatDong": "Thứ 2 - Chủ nhật",
+    "Hotline": "0276 3813 456",
+    "HinhAnh": [
+      "https://toplist.vn/images/800px/bo-to-ut-khuong-423969.jpg",
+      "https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/05_2022/quan-to-ngon-o-tay-ninh-ut-kuong.jpg",
+      "https://badenmountain.sunworld.vn/wp-content/uploads/2024/01/bo-to-tay-ninh-25.jpg"
+    ]
+  },
+  {
+    "TenDiaDiem": "Hầm Rượu Sông Cầu",
+    "DiaChi": "10a Nguyễn Văn Bạch, KP. 1, TP. Tây Ninh",
+    "ViTriMap": { "lat": 11.3100, "lng": 106.1020 },
+    "LinkVR360": "",
+    "NoiDung": "Nhà hàng phong cách hầm rượu châu Âu, sang trọng, phục vụ món Á–Âu kết hợp bộ sưu tập rượu, thích hợp cho tiệc lãng mạn hoặc đối tác.",
+    "GioMoCua": "10:00 - 22:00",
+    "LichHoatDong": "Thứ 2 - Chủ nhật",
+    "Hotline": "",
+    "HinhAnh": [
+      "https://khudulichnuibaden.tayninh.gov.vn/upload/news/front-of-rest-8870-4770.jpg",
+      "https://nhahanghamruousongcautayninh.com/thumbs/685x585x1/upload/news/hamruou-5640.png",
+      "https://nhahanghamruousongcautayninh.com/thumbs/685x585x1/upload/news/thucdon-7689.png"
+    ]
+  }
+]

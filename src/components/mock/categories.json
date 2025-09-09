@@ -1,0 +1,134 @@
+[
+    {
+        "id": 1,
+        "name": "Hành chính công",
+        "icon": "/src/static/image/hanhchinhcong.png",
+        "subcategories": [
+            {
+                "id": 2,
+                "idcha": 1,
+                "name": "Tra cứu thủ tục hành chính",
+                "icon": "/src/static/image/tracuutthc.png",
+                "page": "/hanhchinhcong/tracuutthc"
+            },
+            {
+                "id": 3,
+                "idcha": 1,
+                "name": "Tra cứu hồ sơ",
+                "icon": "/src/static/image/tracuuhoso.png",
+                "page": "/hanhchinhcong/tracuuhoso"
+            },
+            {
+                "id": 4,
+                "idcha": 1,
+                "name": "Bốc số từ xa",
+                "icon": "/src/static/image/bocso.png",
+                "url": "https://demo6.tayninh.gov.vn/frontend/kiosk4/23"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Du lịch",
+        "icon": "/src/static/image/dulich.png",
+        "subcategories": [
+            {
+                "id": 8,
+                "idcha": 7,
+                "name": "Nhà hàng",
+                "icon": "/src/static/image/nhahang.png",
+                "page": "/dulich/nhahang"
+            },
+            {
+                "id": 9,
+                "idcha": 7,
+                "name": "Khách sạn",
+                "icon": "/src/static/image/khachsan.png",
+                "page": "/dulich/khachsan"
+            },
+            {
+                "id": 10,
+                "idcha": 7,
+                "name": "Homestay",
+                "icon": "/src/static/image/homestay.png",
+                "page": "/dulich/homestay"
+            },
+            {
+                "id": 11,
+                "idcha": 7,
+                "name": "Lịch sử - Văn hoá",
+                "icon": "/src/static/image/lichsu.png",
+                "page": "/dulich/diadiemdulich"
+            }
+        ]
+    },
+  
+    {
+        "id": 13,
+        "name": "Phản ánh - Kiến nghị",
+        "icon": "/src/static/image/phananh.png",
+        "subcategories": [
+            {
+                "id": 14,
+                "idcha": 13,
+                "name": "Phản ánh - Kiến nghị",
+                "icon": "/src/static/image/phananh.png",
+                "page": "/phananhkiennghi/phananh"
+            },
+            {
+                "id": 15,
+                "idcha": 13,
+                "name": "Đường dây nóng",
+                "icon": "/src/static/image/hotline.png",
+                "page": "/phananhkiennghi/duongdaynong"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Dịch vụ thiết yếu",
+        "icon": "@/static/image/phananh.png",
+        "subcategories": [
+            {
+                "id": 17,
+                "idcha": 16,
+                "name": "Dịch vụ y tế",
+                "icon": "/static/image/phananh.png",
+                "page": "/phananhkiennghi/phananh"
+            },
+            {
+                "id": 18,
+                "idcha": 16,
+                "name": "Dịch vụ nước",
+                "icon": "/static/image/hotline.png",
+                "page": "/phananhkiennghi/duongdaynong"
+            },
+            {
+                "id": 19,
+                "idcha": 16,
+                "name": "Giáo dục",
+                "icon": "/static/image/hotline.png",
+                "page": "/phananhkiennghi/duongdaynong"
+            },
+             {
+                "id": 20,
+                "idcha": 16,
+                "name": "Tổ công nghệ số cộng đồng",
+                "icon": "/static/image/hotline.png",
+                "page": "/phananhkiennghi/duongdaynong"
+            },
+              {
+                "id": 21,
+                "idcha": 16,
+                "name": "Doanh nghiệp hợp tác xã",
+                "icon": "/static/image/hotline.png",
+                "page": "/phananhkiennghi/duongdaynong"
+            }
+        ]
+    },
+      {
+        "id": 12,
+        "name": "Sản phẩm OCOP",
+        "icon": "/src/static/image/sanpham.png"
+    }
+]

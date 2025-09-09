@@ -1,0 +1,57 @@
+[
+  {
+    "TenDiaDiem": "Núi Bà Đen",
+    "DiaChi": "khu phố Ninh Phú, phường Bình Minh, tỉnh Tây Ninh",
+    "ViTriMap": {
+      "lat": 11.3833,
+      "lng": 106.3167
+    },
+    "LinkVR360": "https://example.com/vr360/nui-ba-den",
+    "NoiDung": "Núi Bà Đen là ngọn núi cao nhất Nam Bộ với độ cao 986m so với mực nước biển. Đây là điểm du lịch tâm linh nổi tiếng với nhiều chùa chiền, đền thờ và hệ thống cáp treo hiện đại. Núi Bà Đen còn có nhiều truyền thuyết linh thiêng và là nơi hành hương của nhiều du khách.",
+    "GioMoCua": "06:00 - 18:00",
+    "LichHoatDong": "Thứ 2 - Chủ nhật",
+    "Hotline": "0276 3123 456",
+    "HinhAnh": [
+      "https://baotayninh.vn/image/fckeditor/upload/2024/20240226/images/ba%20den%201.png",
+      "https://baotayninh.vn/image/fckeditor/upload/2024/20240226/images/ba%20den%201.png",
+      "https://baotayninh.vn/image/fckeditor/upload/2024/20240226/images/ba%20den%201.png"
+    ]
+  },
+  {
+    "TenDiaDiem": "Tòa Thánh Tây Ninh",
+    "DiaChi": "Phạm Hộ Pháp, phường Long Hoa, Tây Ninh",
+    "ViTriMap": {
+      "lat": 11.3100,
+      "lng": 106.1000
+    },
+    "LinkVR360": "https://example.com/vr360/toa-thanh-tay-ninh",
+    "NoiDung": "Tòa Thánh Tây Ninh là trung tâm của đạo Cao Đài, được xây dựng từ năm 1927. Đây là công trình kiến trúc độc đáo, kết hợp giữa phong cách Đông Tây, là nơi sinh hoạt tôn giáo quan trọng và điểm tham quan văn hóa tâm linh hấp dẫn.",
+    "GioMoCua": "06:00 - 18:00",
+    "LichHoatDong": "Thứ 2 - Chủ nhật",
+    "Hotline": "0276 3822 376",
+    "HinhAnh": [
+      "https://badenmountain.sunworld.vn/wp-content/uploads/2024/03/1-toa-thanh-tay-ninh.jpg",
+      "https://example.com/images/toa-thanh-tay-ninh-2.jpg",
+      "https://example.com/images/toa-thanh-tay-ninh-3.jpg"
+    ]
+  },
+
+  {
+    "TenDiaDiem": "Khu du lịch Dầu Tiếng",
+    "DiaChi": "Thị xã Dầu Tiếng, tỉnh Bình Dương (gần biên giới Tây Ninh)",
+    "ViTriMap": {
+      "lat": 11.4000,
+      "lng": 106.4500
+    },
+    "LinkVR360": "https://example.com/vr360/khu-du-lich-dau-tieng",
+    "NoiDung": "Khu du lịch Dầu Tiếng nổi tiếng với hồ Dầu Tiếng rộng lớn, cảnh quan thiên nhiên tươi đẹp. Đây là nơi lý tưởng để câu cá, du thuyền, cắm trại và tận hưởng không khí trong lành của vùng nông thôn.",
+    "GioMoCua": "06:00 - 18:00",
+    "LichHoatDong": "Thứ 2 - Chủ nhật",
+    "Hotline": "0274 3654 321",
+    "HinhAnh": [
+      "https://images.vietnamtourism.gov.vn/vn//images/2019/CNMN/5.12.Ho_Dau_Tieng_-_diem_den_hap_dan_tai_Tay_Ninh_3.jpg",
+      "https://example.com/images/khu-du-lich-dau-tieng-2.jpg",
+      "https://example.com/images/khu-du-lich-dau-tieng-3.jpg"
+    ]
+  }
+]
