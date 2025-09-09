@@ -1,0 +1,78 @@
+{
+  "homestay": [
+    {
+      "ten": "Farmstay Núi Bà",
+      "diaChi": "Ấp Ninh Trung, xã Ninh Sơn, TP. Tây Ninh",
+      "moTa": "Homestay sinh thái gần núi Bà Đen, có vườn rau hữu cơ.",
+      "soDienThoai": "0938 123 456",
+      "hinhAnh": "https://motogo.vn/wp-content/uploads/2023/05/homestay-tay-ninh-35.jpg",
+      "googleMapsUrl": "https://maps.google.com/?q=Farmstay+Núi+Bà+Tây+Ninh",
+      "giaPhong": [
+        { "loai": "Phòng Đôi", "gia": "650,000đ/đêm" },
+        { "loai": "Phòng Gia đình", "gia": "950,000đ/đêm" },
+        { "loai": "Nguyên căn", "gia": "2,500,000đ/đêm" }
+      ]
+    },
+    {
+      "ten": "Homestay An Nhiên",
+      "diaChi": "45 Nguyễn Huệ, Tây Ninh",
+      "moTa": "Homestay phong cách tối giản, sạch sẽ và yên tĩnh.",
+      "soDienThoai": "0971 888 222",
+      "hinhAnh": "https://motogo.vn/wp-content/uploads/2023/05/homestay-tay-ninh-35.jpg",
+      "googleMapsUrl": "https://maps.google.com/?q=Homestay+An+Nhiên+Tây+Ninh",
+      "giaPhong": [
+        { "loai": "Phòng Đơn", "gia": "400,000đ/đêm" },
+        { "loai": "Phòng Đôi", "gia": "600,000đ/đêm" }
+      ]
+    },
+    {
+      "ten": "Green House",
+      "diaChi": "Số 3, Ấp Long Châu, TP. Tây Ninh",
+      "moTa": "Nơi nghỉ dưỡng kiểu sân vườn, gần đồng lúa và sông Vàm Cỏ.",
+      "soDienThoai": "0987 654 321",
+      "hinhAnh": "https://motogo.vn/wp-content/uploads/2023/05/homestay-tay-ninh-35.jpg",
+      "googleMapsUrl": "https://maps.google.com/?q=Green+House+Tây+Ninh",
+      "giaPhong": [
+        { "loai": "Phòng Tiêu chuẩn", "gia": "500,000đ/đêm" },
+        { "loai": "Phòng Deluxe", "gia": "800,000đ/đêm" }
+      ]
+    },
+    {
+      "ten": "Nắng Homestay",
+      "diaChi": "22 Đường 3/2, Tây Ninh",
+      "moTa": "Không gian trẻ trung, phù hợp nhóm bạn trẻ du lịch.",
+      "soDienThoai": "0933 222 444",
+      "hinhAnh": "https://motogo.vn/wp-content/uploads/2023/05/homestay-tay-ninh-35.jpg",
+      "googleMapsUrl": "https://maps.google.com/?q=Nắng+Homestay+Tây+Ninh",
+      "giaPhong": [
+        { "loai": "Phòng Dorm (6 giường)", "gia": "150,000đ/người/đêm" },
+        { "loai": "Phòng Đôi", "gia": "500,000đ/đêm" }
+      ]
+    },
+    {
+      "ten": "Bà Đen Homestay",
+      "diaChi": "Gần cáp treo núi Bà Đen, Tây Ninh",
+      "moTa": "Vị trí thuận lợi cho hành hương và leo núi.",
+      "soDienThoai": "0944 777 999",
+      "hinhAnh": "https://motogo.vn/wp-content/uploads/2023/05/homestay-tay-ninh-35.jpg",
+      "googleMapsUrl": "https://maps.google.com/?q=Bà+Đen+Homestay+Tây+Ninh",
+      "giaPhong": [
+        { "loai": "Phòng Đơn", "gia": "350,000đ/đêm" },
+        { "loai": "Phòng Đôi", "gia": "500,000đ/đêm" },
+        { "loai": "Nguyên căn", "gia": "1,800,000đ/đêm" }
+      ]
+    },
+    {
+      "ten": "Mộc Homestay",
+      "diaChi": "9 Nguyễn Trãi, Tây Ninh",
+      "moTa": "Homestay giá rẻ, tiện nghi cơ bản, gần trung tâm.",
+      "soDienThoai": "0973 123 888",
+      "hinhAnh": "https://motogo.vn/wp-content/uploads/2023/05/homestay-tay-ninh-35.jpg",
+      "googleMapsUrl": "https://maps.google.com/?q=Mộc+Homestay+Tây+Ninh",
+      "giaPhong": [
+        { "loai": "Phòng Quạt máy", "gia": "200,000đ/đêm" },
+        { "loai": "Phòng Máy lạnh", "gia": "300,000đ/đêm" }
+      ]
+    }
+  ]
+}

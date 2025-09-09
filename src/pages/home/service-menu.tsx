@@ -86,6 +86,19 @@ function SubcategoryPopup({
 }) {
   if (!isOpen || !category) return null;
 
+  /**
+   * handleOpenUrl - Mở URL bên trong Zalo bằng openWebview ở chế độ style "normal"
+   * Lưu ý: Thuộc tính style phải đặt trong config theo type của zmp-sdk
+   */
+  const handleOpenUrl = async (url: string) => {
+    try {
+      await openWebview({ url, config: { style: 'normal' } });
+    } catch (err) {
+      // Tùy chọn: Có thể fallback window.open nếu cần, hiện chỉ thực thi theo yêu cầu
+      console.error("openWebview error", err);
+    }
+  };
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={onClose}>
       <div className="bg-white rounded-xl p-6 m-4 max-w-md w-full max-h-96 overflow-y-auto" onClick={(e) => e.stopPropagation()}>
@@ -113,15 +126,14 @@ function SubcategoryPopup({
               
               if (subcategory.url) {
                 return (
-                  <a 
+                  <button
                     key={subcategory.id}
-                    href={subcategory.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
+                    type="button"
+                    onClick={() => handleOpenUrl(subcategory.url!)}
+                    className="block text-left"
                   >
                     {content}
-                  </a>
+                  </button>
                 );
               } else if (subcategory.page) {
                 return (

@@ -17,6 +17,7 @@ import SearchResultPage from "./pages/search";
 import { ErrorBoundary } from "./components/error-boundary";
 import DepartmentDetailPage from "./pages/detail/department";
 import NewsPage from "./pages/news";
+import RestaurantListPage from "./pages/home/restaurants/list";
 
 const router = createBrowserRouter(
   [
@@ -141,7 +142,15 @@ const router = createBrowserRouter(
           path: "*",
           element: <NotFound />,
         },
-       
+        {
+          path: "/restaurants/list",
+          element: <RestaurantListPage />,
+          handle: {
+            back: true,
+            title: "Nhà hàng",
+            noScroll: true,
+          },
+        },
       ],
       ErrorBoundary,
     },

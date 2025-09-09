@@ -39,7 +39,7 @@
                 "idcha": 7,
                 "name": "Nhà hàng",
                 "icon": "/src/static/image/nhahang.png",
-                "page": "/dulich/nhahang"
+                "page": "/restaurants/list"
             },
             {
                 "id": 9,
