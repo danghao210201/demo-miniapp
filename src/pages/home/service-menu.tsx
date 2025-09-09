@@ -1,6 +1,61 @@
 import React, { useState } from 'react';
 import TransitionLink from '@/components/transition-link';
+import { openWebview } from "zmp-sdk/apis";
 import categoriesData from '@/components/mock/categories.json';
+import hanhchinhcong from "../../static/image/hanhchinhcong.png";
+import dulich from "../../static/image/dulich.png";
+import sanpham from "../../static/image/sanpham.png";
+import tintuc from "../../static/image/tintuc.png";
+import phananh from "../../static/image/phananh.png";
+import lichsu from "../../static/image/lichsu.png";
+import tracuutthc from "../../static/image/tracuutthc.png";
+import tracuuhoso from "../../static/image/tracuuhoso.png";
+import bocso from "../../static/image/bocso.png";
+import hoidap from "../../static/image/hoidap.png";
+import danhgia from "../../static/image/danhgia.png";
+import nhahang from "../../static/image/nhahang.png";
+import hotline from "../../static/image/hotline.png";
+import ttv11 from "../../static/image/ttv11.png";
+import thongbao from "../../static/image/thongbao.png";
+import khachsan from "../../static/image/khachsan.png";
+import homestay from "../../static/image/homestay.png";
+import diadiemdulich from "../../static/image/diadiemdulich.png";
+import lichsuhinhthanh from "../../static/image/lichsuhinhthanh.png";
+import diadiem from "../../static/image/diadiem.png";
+
+  const getImagePath = (path: string) => {
+    if (path.startsWith('/src/static/image')) {
+      // Lấy tên file từ đường dẫn (không bao gồm phần mở rộng)
+      const fileName = path.split('/').pop()?.split('.')[0];
+
+      // Map tên file với biến đã import
+      const imageMap: { [key: string]: any } = {
+        hanhchinhcong,
+        dulich,
+        sanpham,
+        tintuc,
+        phananh,
+        lichsu,
+        tracuutthc,
+        tracuuhoso,
+        bocso,
+        hoidap,
+        danhgia,
+        nhahang,
+        hotline,
+        ttv11,
+        thongbao,
+        khachsan,
+        homestay,
+        lichsuhinhthanh,
+        diadiem,
+        diadiemdulich
+      };
+
+      return imageMap[fileName || ''] || '';
+    }
+    return path;
+  };
 
 // Interface cho dữ liệu category
 interface Subcategory {
@@ -17,42 +72,6 @@ interface Category {
   name: string;
   icon: string;
   subcategories?: Subcategory[];
-}
-
-// Tạo map URL ảnh từ thư mục src/static/image để dùng runtime
-// Vite sẽ trả về URL đã được xử lý (dev/build) -> phù hợp cho img.src
-const imageUrls = import.meta.glob('@/static/image/*', {
-  eager: true,
-  query: '?url',
-  import: 'default',
-}) as Record<string, string>;
-
-/**
- * resolveIconPath
- * - Nhận đường dẫn icon từ JSON (ví dụ "/src/static/image/hanhchinhcong.png" hoặc "@/static/image/phananh.png").
- * - Trích tên file và tìm URL tương ứng từ imageUrls.
- * - Nếu không tìm thấy, trả lại chuỗi gốc như fallback.
- */
-function resolveIconPath(iconPath: string): string {
-  if (!iconPath) return iconPath;
-  const fileName = iconPath.split('/').pop() || iconPath;
-  const match = Object.entries(imageUrls).find(([key]) => key.endsWith(`/image/${fileName}`));
-  return match ? match[1] : iconPath;
-}
-
-/**
- * prepareCategoriesWithResolvedIcons
- * - Map dữ liệu categories để chuyển icon thành URL hợp lệ cho <img src>.
- */
-function prepareCategoriesWithResolvedIcons(data: Category[]): Category[] {
-  return data.map((cat) => ({
-    ...cat,
-    icon: resolveIconPath(cat.icon),
-    subcategories: cat.subcategories?.map((sub) => ({
-      ...sub,
-      icon: resolveIconPath(sub.icon),
-    })),
-  }));
 }
 
 // Component popup hiển thị subcategories
@@ -86,7 +105,7 @@ function SubcategoryPopup({
               const content = (
                 <div className="flex flex-col items-center space-y-2 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                   <div className="h-10 w-10 flex items-center justify-center">
-                    <img src={subcategory.icon} alt={subcategory.name} className="h-8 w-8" />
+                    <img src={getImagePath(subcategory.icon)} alt={subcategory.name} className="h-8 w-8" />
                   </div>
                   <span className="text-xs font-medium text-center">{subcategory.name}</span>
                 </div>
@@ -141,7 +160,7 @@ function CategoryItem({
       className="flex flex-col items-center space-y-2 p-2 rounded-lg hover:bg-gray-50 transition-colors"
     >
       <div className="h-9 w-9 flex items-center justify-center">
-        <img src={category.icon} alt={category.name} className="h-8 w-8" />
+        <img src={getImagePath(category.icon)} alt={category.name} className="h-8 w-8" />
       </div>
       <div className="text-xs text-center w-full">{category.name}</div>
     </button>
@@ -155,9 +174,6 @@ function CategoryItem({
 export default function ServiceMenu() {
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  
-  // Chuẩn hóa icon -> URL hợp lệ để hiển thị ảnh
-  const categories: Category[] = prepareCategoriesWithResolvedIcons(categoriesData as unknown as Category[]);
   
   // Xử lý khi click vào category
   const handleCategoryClick = (category: Category) => {
@@ -176,7 +192,7 @@ export default function ServiceMenu() {
   return (
     <>
       <div className="bg-white bg-opacity-80 grid grid-cols-3 gap-4 p-4 rounded-xl drop-shadow-xl">
-        {categories.map((category) => (
+        {categoriesData.map((category) => (
           <CategoryItem 
             key={category.id}
             category={category}
