@@ -97,7 +97,7 @@
                 "idcha": 16,
                 "name": "Dịch vụ y tế",
                 "icon": "/src/static/image/phananh.png",
-                "page": "/phananhkiennghi/phananh"
+                "page": "/dichvuthietyeu/yte"
             },
             {
                 "id": 18,

@@ -1,132 +1,146 @@
-import React, { FC, useState, useEffect } from "react";
-import { Box, Page, Text, Button, Icon, Header } from "zmp-ui";
-import { useNavigate } from "react-router-dom";
+import { useMemo, useState } from "react";
 import phananh from "@/components/mock/kiennghi.json";
+import TransitionLink from "@/components/transition-link";
+import { Box, Button, Icon, Text } from "zmp-ui";
 
-interface PhanAnh {
-  id: string;
-  hoTen: string;
-  soDienThoai: string;
-  thoiGianGui: string;
-  noiDung: string;
-  hinhAnh?: string;
-  phanHoi?: {
-    noiDung: string;
-    thoiGianPhanHoi: string;
-  };
-}
+/**
+ * Trang Danh sách phản ánh
+ * - Hiển thị thanh tìm kiếm ở trên cùng
+ * - Bên dưới là danh sách phản ánh dạng thẻ (card) với ảnh cover, nội dung rút gọn, thời gian gửi
+ * - Hỗ trợ lọc theo từ khóa theo họ tên, số điện thoại và nội dung
+ * - Fix không scroll: dùng pattern layout chung của dự án
+ *   + Wrapper: flex-1 flex-col overflow-hidden (giữ 1 vùng cuộn duy nhất)
+ *   + List container: flex-1 overflow-y-auto (vùng cuộn chính)
+ */
+export default function DanhSachPhanAnh() {
+  const [keyword, setKeyword] = useState("");
 
-export const DanhSachPhanAnh: FC = () => {
-  const navigate = useNavigate();
-  const [danhSachPhanAnh, setDanhSachPhanAnh] = useState<PhanAnh[]>([]);
+  /**
+   * Tạo danh sách đã lọc theo từ khóa.
+   * Ưu tiên lọc theo: Họ tên, số điện thoại, nội dung.
+   */
+  const items = useMemo(() => {
+    const kw = keyword.trim().toLowerCase();
+    if (!kw) return phananh.map((r, i) => ({ ...r, _index: i } as any));
+    return phananh
+      .map((r, i) => ({ ...r, _index: i } as any))
+      .filter((r: any) => {
+        const name = (r.hoTen || "").toLowerCase();
+        const phone = (r.soDienThoai || "").toLowerCase();
+        const content = (r.noiDung || "").toLowerCase();
+        return name.includes(kw) || phone.includes(kw) || content.includes(kw);
+      });
+  }, [keyword]);
 
-  useEffect(() => {
-    // Lấy dữ liệu từ mock data
-    setDanhSachPhanAnh(phananh);
-  }, []);
-
-  // Định dạng ngày giờ
+  /**
+   * Định dạng ngày giờ
+   */
   const formatDateTime = (dateTimeStr: string) => {
     const date = new Date(dateTimeStr);
-    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()}`;
+    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes()
+      }`;
   };
 
-  // Rút gọn nội dung
+  /**
+   * Rút gọn nội dung
+   */
   const truncateContent = (content: string, maxLength: number = 80) => {
+    if (!content) return "";
     if (content.length <= maxLength) return content;
     return content.substring(0, maxLength) + "...";
   };
 
-  // Xử lý khi nhấn vào xem chi tiết
-  const handleViewDetail = (id: string) => {
-    navigate(`/kiennghi/chitietphananh?id=${id}`);
-  };
-
-  // Xử lý khi nhấn vào nút gửi phản ánh
-  const handleSendFeedback = () => {
-    navigate("/kiennghi/guiphananh");
-  };
-
-  // Xử lý khi nhấn vào nút phản ánh đã gửi
-  const handleViewSentFeedback = () => {
-    navigate("/kiennghi/phananhdagui");
+  /**
+   * Lấy ảnh cover hoặc placeholder
+   */
+  const getCover = (src?: string) => {
+    return (
+      src ||
+      "https://via.placeholder.com/600x338/e5e7eb/6b7280?text=Phản+ánh+hiện+trường"
+    );
   };
 
   return (
-    <Page className=" bg-gray-50">
-      {/* Question text */}
-      <Box onClick={handleSendFeedback} className="p-4 bg-white">
-        <Text className="text-gray-600 text-sm">Bạn có sự việc cần phản ánh ?</Text>
-      </Box>
+    <div className="flex-1 flex flex-col overflow-hidden bg-gray-50 min-h-0">
+      <Box className="p-4 bg-white">
+        <TransitionLink
+          to="/kiennghi/guiphananh"
+        >
+          <Text className="text-gray-600 text-sm">Bạn có sự việc cần phản ánh?</Text>
+        </TransitionLink>
 
+      </Box>
       {/* Action buttons */}
-      <Box className="flex p-4 bg-white border-b border-gray-200 space-x-2">
-        <Button
-          className="flex-1 flex items-center justify-center bg-blue-600 text-white border-none rounded-lg"
-          onClick={handleSendFeedback}
-          size="small"
+      <div className="flex p-4 bg-white border-b border-gray-200 space-x-2">
+        <TransitionLink
+          to="/kiennghi/guiphananh"
+          className="flex-1 flex items-center justify-center bg-blue-600 text-white border-none rounded-lg px-3 py-2"
         >
-          <Box className="flex items-center justify-center">
-            <Icon icon="zi-share" className="mr-2" size={15} />
-            <Text className="text-white">Gửi phản ánh</Text>
-          </Box>
-        </Button>
+          <Icon icon="zi-share" className="mr-2" size={15} />
+          <Text className="text-white">Gửi phản ánh</Text>
+        </TransitionLink>
 
-        <Button
-          className="flex-1 flex items-center justify-center bg-blue-600 text-white border-none rounded-lg"
-          onClick={handleViewSentFeedback}
-          size="small"
+        <TransitionLink
+          to="/kiennghi/phananhdagui"
+          className="flex-1 flex items-center justify-center bg-blue-600 text-white border-none rounded-lg px-3 py-2"
         >
-          <Box className="flex items-center justify-center">
-            <Icon icon="zi-clock-1" className="mr-2" size={15} />
-            <Text className="text-white">Phản ánh đã gửi</Text>
-          </Box>
-        </Button>
-      </Box>
+          <Icon icon="zi-clock-1" className="mr-2" size={15} />
+          <Text className="text-white">Đã gửi</Text>
+        </TransitionLink>
+      </div>
+      {/* Danh sách phản ánh - vùng cuộn chính */}
+      <div className="flex-1 p-4 space-y-4 overflow-y-auto pb-24">
+        {items.map((r: any, idx) => (
+          <TransitionLink
+            key={idx}
+            to={`/kiennghi/chitietphananh?id=${r.id}`}
+            className="block bg-white rounded-2xl shadow-sm border border-black/5 overflow-hidden"
+          >
+            {/* Ảnh cover */}
+            <div className="relative w-full aspect-[16/9]">
+              <img
+                src={getCover(r.hinhAnh)}
+                alt="Phản ánh"
+                className="absolute inset-0 w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src =
+                    "https://via.placeholder.com/600x338/e5e7eb/6b7280?text=No+Image";
+                }}
+              />
+            </div>
 
-      {/* Danh sách phản ánh */}
-      <Box className="flex-1 overflow-auto">
-        {danhSachPhanAnh.length > 0 ? (
-          <Box className="">
-            {danhSachPhanAnh.map((item) => (
-              <Box
-                key={item.id}
-                className="bg-white mb-2 shadow-sm"
-                onClick={() => handleViewDetail(item.id)}
-              >
-                {/* Image placeholder */}
-                <Box className="w-full h-48 bg-gray-200 relative">
-                  <img
-                    src={item.hinhAnh || "https://via.placeholder.com/400x200/4CAF50/FFFFFF?text=Phản+ánh+hiện+trường"}
-                    alt="Phản ánh"
-                    className="w-full h-full object-cover"
+            {/* Nội dung */}
+            <div className="p-3.5">
+              <h3 className="text-[15px] font-medium leading-snug">
+                {truncateContent(r.noiDung, 100)}
+              </h3>
+
+              {/* Thời gian */}
+              <div className="mt-2 flex items-center gap-2 text-[13px] text-gray-600">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  className="w-4 h-4 text-primary shrink-0"
+                >
+                  <path d="M12 7a1 1 0 0 1 1 1v3.586l2.707 2.707a1 1 0 0 1-1.414 1.414L11 12.414V8a1 1 0 0 1 1-1z" />
+                  <path
+                    fillRule="evenodd"
+                    d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"
                   />
-                </Box>
+                </svg>
+                <span>{formatDateTime(r.thoiGianGui)}</span>
+              </div>
+            </div>
+          </TransitionLink>
+        ))}
 
-                {/* Content */}
-                <Box className="p-4">
-                  <Text className="font-medium text-gray-900 mb-2 leading-5">
-                    {truncateContent(item.noiDung, 100)}
-                  </Text>
-
-                  {/* Time and location info */}
-                  <Box className="flex items-center text-xs text-gray-500">
-                    <Icon icon="zi-clock-1" size={12} className="mr-1" />
-                    <Text className="mr-4">{formatDateTime(item.thoiGianGui)}</Text>
-                  </Box>
-                </Box>
-              </Box>
-            ))}
-          </Box>
-        ) : (
-          <Box className="flex flex-col items-center justify-center py-20">
-            <Icon icon="zi-note" size={48} className="text-gray-300 mb-4" />
-            <Text className="text-gray-500">Chưa có phản ánh nào</Text>
-          </Box>
+        {/* Trạng thái rỗng */}
+        {items.length === 0 && (
+          <div className="text-center text-sm text-disabled py-8">
+            Không tìm thấy phản ánh nào
+          </div>
         )}
-      </Box>
-    </Page>
+      </div>
+    </div>
   );
-};
-
-export default DanhSachPhanAnh;
+}

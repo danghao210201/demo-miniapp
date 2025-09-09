@@ -30,6 +30,7 @@ import HomestayListPage from "./pages/home/homestay/list";
 import HomestayDetailPage from "./pages/home/homestay/detail";
 import LichSuVanHoaListPage from "./pages/home/lichsuvanhoa/list";
 import LichSuVanHoaDetailPage from "./pages/home/lichsuvanhoa/detail";
+import YTePage from "./pages/home/dichvuthietyeu/yte";
 
 const router = createBrowserRouter(
   [
@@ -271,6 +272,15 @@ const router = createBrowserRouter(
           handle: {
             back: true,
             title: "Đường dây nóng",
+            noScroll: true,
+          },
+        },
+        {
+          path: "/dichvuthietyeu/yte",
+          element: <YTePage />,
+          handle: {
+            back: true,
+            title: "Dịch vụ y tế",
             noScroll: true,
           },
         },
