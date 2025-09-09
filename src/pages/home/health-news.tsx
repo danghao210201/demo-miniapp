@@ -1,9 +1,12 @@
 import Section from "@/components/section";
 import TransitionLink from "@/components/transition-link";
-import { articlesState } from "@/state";
 import { Article } from "@/types";
-import { useAtomValue } from "jotai";
+import newsData from "@/components/mock/tintuc.json";
 
+/**
+ * Hiển thị 1 item tin tức sức khỏe.
+ * Nhận vào dữ liệu theo kiểu Article (đã được map từ tintuc.json).
+ */
 export function NewsItem(news: Article) {
   return (
     <TransitionLink
@@ -27,8 +30,25 @@ export function NewsItem(news: Article) {
   );
 }
 
+/**
+ * Section "Tin tức sức khỏe" lấy dữ liệu từ mock tintuc.json.
+ * - Gọi dữ liệu từ src/components/mock/tintuc.json
+ * - Map sang kiểu Article để tái sử dụng component NewsItem hiện có
+ * - Hiển thị 3 bản tin đầu tiên
+ */
 export default function HealthNews() {
-  const [a1, a2, a3] = useAtomValue(articlesState);
+  // Map dữ liệu thô từ tintuc.json sang Article để phù hợp UI hiện tại
+  const mapped: Article[] = (newsData as any[]).map((n) => ({
+    id: n.id,
+    title: n.title,
+    description: n.preview || "",
+    category: "Tin tức",
+    timeAgo: "",
+    image: n.thumbnail,
+    content: n.content,
+  }));
+
+  const [a1, a2, a3] = mapped.slice(0, 3);
 
   return (
     <Section
@@ -36,9 +56,9 @@ export default function HealthNews() {
       title="Tin tức"
       viewMore="/explore"
     >
-      <NewsItem {...a1} />
-      <NewsItem {...a2} />
-      <NewsItem {...a3} />
+      {a1 && <NewsItem {...a1} />}
+      {a2 && <NewsItem {...a2} />}
+      {a3 && <NewsItem {...a3} />}
     </Section>
   );
 }

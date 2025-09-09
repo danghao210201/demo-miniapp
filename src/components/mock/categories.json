@@ -9,14 +9,16 @@
                 "idcha": 1,
                 "name": "Tra cứu thủ tục hành chính",
                 "icon": "/src/static/image/tracuutthc.png",
-                "page": "/hanhchinhcong/tracuutthc"
+                "page": "/hanhchinhcong/tracuutthc",
+                "url":"https://thutuc.dichvucong.gov.vn/p/home/dvc-tthc-trang-chu.html"
             },
             {
                 "id": 3,
                 "idcha": 1,
                 "name": "Tra cứu hồ sơ",
                 "icon": "/src/static/image/tracuuhoso.png",
-                "page": "/hanhchinhcong/tracuuhoso"
+                "page": "/hanhchinhcong/tracuuhoso",
+                "url":"https://dichvucong.gov.vn/p/home/dvc-tra-cuu-ho-so.html"
             },
             {
                 "id": 4,
@@ -65,13 +67,13 @@
   
     {
         "id": 13,
-        "name": "Phản ánh - Kiến nghị",
+        "name": "Kiến nghị - Phản ánh",
         "icon": "/src/static/image/phananh.png",
         "subcategories": [
             {
                 "id": 14,
                 "idcha": 13,
-                "name": "Phản ánh - Kiến nghị",
+                "name": "Kiến nghị - Phản ánh",
                 "icon": "/src/static/image/phananh.png",
                 "page": "/phananhkiennghi/phananh"
             },
@@ -87,41 +89,41 @@
     {
         "id": 16,
         "name": "Dịch vụ thiết yếu",
-        "icon": "@/static/image/phananh.png",
+        "icon": "/src/static/image/phananh.png",
         "subcategories": [
             {
                 "id": 17,
                 "idcha": 16,
                 "name": "Dịch vụ y tế",
-                "icon": "/static/image/phananh.png",
+                "icon": "/src/static/image/phananh.png",
                 "page": "/phananhkiennghi/phananh"
             },
             {
                 "id": 18,
                 "idcha": 16,
                 "name": "Dịch vụ nước",
-                "icon": "/static/image/hotline.png",
+                "icon": "/src/static/image/hotline.png",
                 "page": "/phananhkiennghi/duongdaynong"
             },
             {
                 "id": 19,
                 "idcha": 16,
                 "name": "Giáo dục",
-                "icon": "/static/image/hotline.png",
+                "icon": "/src/static/image/hotline.png",
                 "page": "/phananhkiennghi/duongdaynong"
             },
              {
                 "id": 20,
                 "idcha": 16,
                 "name": "Tổ công nghệ số cộng đồng",
-                "icon": "/static/image/hotline.png",
+                "icon": "/src/static/image/hotline.png",
                 "page": "/phananhkiennghi/duongdaynong"
             },
               {
                 "id": 21,
                 "idcha": 16,
                 "name": "Doanh nghiệp hợp tác xã",
-                "icon": "/static/image/hotline.png",
+                "icon": "/src/static/image/hotline.png",
                 "page": "/phananhkiennghi/duongdaynong"
             }
         ]

@@ -19,6 +19,42 @@ interface Category {
   subcategories?: Subcategory[];
 }
 
+// Tạo map URL ảnh từ thư mục src/static/image để dùng runtime
+// Vite sẽ trả về URL đã được xử lý (dev/build) -> phù hợp cho img.src
+const imageUrls = import.meta.glob('@/static/image/*', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+}) as Record<string, string>;
+
+/**
+ * resolveIconPath
+ * - Nhận đường dẫn icon từ JSON (ví dụ "/src/static/image/hanhchinhcong.png" hoặc "@/static/image/phananh.png").
+ * - Trích tên file và tìm URL tương ứng từ imageUrls.
+ * - Nếu không tìm thấy, trả lại chuỗi gốc như fallback.
+ */
+function resolveIconPath(iconPath: string): string {
+  if (!iconPath) return iconPath;
+  const fileName = iconPath.split('/').pop() || iconPath;
+  const match = Object.entries(imageUrls).find(([key]) => key.endsWith(`/image/${fileName}`));
+  return match ? match[1] : iconPath;
+}
+
+/**
+ * prepareCategoriesWithResolvedIcons
+ * - Map dữ liệu categories để chuyển icon thành URL hợp lệ cho <img src>.
+ */
+function prepareCategoriesWithResolvedIcons(data: Category[]): Category[] {
+  return data.map((cat) => ({
+    ...cat,
+    icon: resolveIconPath(cat.icon),
+    subcategories: cat.subcategories?.map((sub) => ({
+      ...sub,
+      icon: resolveIconPath(sub.icon),
+    })),
+  }));
+}
+
 // Component popup hiển thị subcategories
 function SubcategoryPopup({ 
   category, 
@@ -120,6 +156,9 @@ export default function ServiceMenu() {
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   
+  // Chuẩn hóa icon -> URL hợp lệ để hiển thị ảnh
+  const categories: Category[] = prepareCategoriesWithResolvedIcons(categoriesData as unknown as Category[]);
+  
   // Xử lý khi click vào category
   const handleCategoryClick = (category: Category) => {
     if (category.subcategories && category.subcategories.length > 0) {
@@ -137,7 +176,7 @@ export default function ServiceMenu() {
   return (
     <>
       <div className="bg-white bg-opacity-80 grid grid-cols-3 gap-4 p-4 rounded-xl drop-shadow-xl">
-        {categoriesData.map((category) => (
+        {categories.map((category) => (
           <CategoryItem 
             key={category.id}
             category={category}

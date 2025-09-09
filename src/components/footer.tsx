@@ -8,29 +8,60 @@ import ProfileIcon from "./icons/profile";
 import BigPlusIcon from "./icons/big-plus";
 import { useRouteHandle } from "@/hooks";
 import FooterWave from "./icons/footer-wave";
+import { Icon } from "zmp-ui";
+import NotifiIcon from "./icons/notifi";
+import { openProfile } from "zmp-sdk";
+
+const handleOpenProfile = async () => {
+  try {
+    await openProfile({
+      type: "oa",
+      id: "3940546633955322358",
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 const NAV_ITEMS = [
-  {
+   {
     name: "Trang chủ",
     path: "/",
     icon: HomeIcon,
+  },  
+  {
+    name: "Chat OA",
+    path: "/c",
+    icon: ChatIcon,
+    // Khi click, mở OA thay vì điều hướng trang
+    onClick: (e: React.MouseEvent) => {
+      e.preventDefault();
+      handleOpenProfile();
+    },
+  },
+ 
+  {
+    name: "Thông báo",
+    path: "/t",
+    icon: NotifiIcon
   },
   // {
   //   name: "Khám phá",
   //   path: "/explore",
   //   icon: ExploreIcon,
   // },
-  {
-    path: "/booking",
-    icon: () => (
-      <BigPlusIcon className="-mt-4 shadow-lg shadow-highlight rounded-full" />
-    ),
-  },
-  {
-    name: "Lịch khám",
-    path: "/schedule",
-    icon: ChatIcon,
-  },
+  // {
+  //   path: "/booking",
+  //   icon: () => (
+  //     <BigPlusIcon className="-mt-4 shadow-lg shadow-highlight rounded-full" />
+  //   ),
+  // },
+
+  // {
+  //   name: "Lịch khám",
+  //   path: "/schedule",
+  //   icon: ChatIcon,
+  // },
   {
     name: "Cá nhân",
     path: "/profile",
@@ -46,12 +77,12 @@ export default function Footer() {
 
   return (
     <div className="w-full relative">
-      <FooterWave
+      {/* <FooterWave
         className="absolute inset-x-0 bottom-sb z-10 h-24 -mb-6"
         style={{
           filter: "drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.08))",
         }}
-      />
+      /> */}
       <div
         className="w-full px-4 pt-2 grid text-3xs relative z-20 justify-center pb-sb bg-white"
         style={{
@@ -63,6 +94,7 @@ export default function Footer() {
             <TransitionLink
               to={item.path}
               key={item.path}
+              onClick={(item as any).onClick}
               className="flex flex-col items-center space-y-0.5 p-1 active:scale-105"
             >
               {({ isActive }) =>
