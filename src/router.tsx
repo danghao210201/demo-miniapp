@@ -31,6 +31,7 @@ import HomestayDetailPage from "./pages/home/homestay/detail";
 import LichSuVanHoaListPage from "./pages/home/lichsuvanhoa/list";
 import LichSuVanHoaDetailPage from "./pages/home/lichsuvanhoa/detail";
 import YTePage from "./pages/home/dichvuthietyeu/yte";
+import GiaoDucPage from "./pages/home/dichvuthietyeu/giaoduc";
 
 const router = createBrowserRouter(
   [
@@ -281,6 +282,15 @@ const router = createBrowserRouter(
           handle: {
             back: true,
             title: "Dịch vụ y tế",
+            noScroll: true,
+          },
+        },
+         {
+          path: "/dichvuthietyeu/giaoduc",
+          element: <GiaoDucPage />,
+          handle: {
+            back: true,
+            title: "Giáo dục",
             noScroll: true,
           },
         },

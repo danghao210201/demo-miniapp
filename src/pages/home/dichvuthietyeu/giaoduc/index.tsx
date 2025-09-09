@@ -5,17 +5,17 @@ import pill from "@/static/services/pill.svg";
 import stethoscope from "@/static/services/stethoscope.svg";
 import { openWebview } from "zmp-sdk/apis";
 
-function YTePage() {
+function GiaoDucPage() {
   return (
     <div className="py-3 px-3 space-y-4">
       <MarkedTitleSection title="Danh mục">
         <div className="grid grid-cols-3 px-5 gap-x-3 gap-y-8">
           <ServiceItem
             icon={clipboard}
-            label="Tra cứu bảo hiểm y tế"
+            label="Thanh toán học phí"
             onClick={() =>
               openWebview({
-                url: "https://baohiemxahoi.gov.vn/tracuu/Pages/tra-cuu-thoi-han-su-dung-the-bhyt.aspx",
+                url: "https://www.vban.vn/dich-vu/thanh-toan-hoc-phi.aspx",
                 config: { style: "normal" },
               })
             }
@@ -23,20 +23,20 @@ function YTePage() {
           {/* Không thay đổi 2 mục còn lại theo yêu cầu */}
           <ServiceItem
             icon={pill}
-            label="Tra cứu thuốc"
+            label="Sổ liên lạc điện tử"
            onClick={() =>
               openWebview({
-                url: "https://dav.gov.vn/tra-cuu-thuoc.html",
+                url: "https://tracuu.vnedu.vn/kqhtv2/",
                 config: { style: "normal" },
               })
             }
           />
           <ServiceItem
             icon={stethoscope}
-            label="Địa điểm tiêm chủng"
+            label="Tuyển sinh"
              onClick={() =>
               openWebview({
-                url: "https://sotiemchung.vncdc.gov.vn/login",
+                url: "https://tuyensinh.tayninh.edu.vn/",
                 config: { style: "normal" },
               })
             }
@@ -47,4 +47,4 @@ function YTePage() {
   );
 }
 
-export default YTePage;
+export default GiaoDucPage;

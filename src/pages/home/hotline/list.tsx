@@ -1,11 +1,22 @@
 import { Text, Icon, Box } from "zmp-ui";
 
+// Chỉ định kiểu icon hợp lệ dùng trong trang này để tương thích với zmp-ui Icon
+export type IconName =
+  | "zi-shield"
+  | "zi-heart"
+  | "zi-home"
+  | "zi-flash"
+  | "zi-water"
+  | "zi-fire"
+  | "zi-plus"
+  | "zi-call";
+
 interface DuongDayNong {
   id: string;
   tenDonVi: string;
   soDienThoai: string;
   moTa?: string;
-  icon?: string;
+  icon?: IconName;
   mauSac?: string;
 }
 
@@ -97,7 +108,7 @@ export default function DuongDayNongPage() {
                   className="w-20 flex items-center justify-center"
                   style={{ backgroundColor: item.mauSac || "#D32F2F" }}
                 >
-                  {item.icon && <Icon icon={item.icon} className="text-white text-2xl" />}
+                  {/* {item.icon && <Icon icon={item.icon} className="text-white text-2xl" />} */}
                 </Box>
 
                 {/* Thông tin chính */}

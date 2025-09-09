@@ -104,14 +104,16 @@
                 "idcha": 16,
                 "name": "Dịch vụ nước",
                 "icon": "/src/static/image/hotline.png",
-                "page": "/phananhkiennghi/duongdaynong"
+                "page": "",
+                "url": "https://www.vban.vn/dich-vu/thanh-toan-hoa-don-nuoc-online.aspx"
+
             },
             {
                 "id": 19,
                 "idcha": 16,
                 "name": "Giáo dục",
                 "icon": "/src/static/image/hotline.png",
-                "page": "/phananhkiennghi/duongdaynong"
+                "page": "/dichvuthietyeu/giaoduc"
             },
              {
                 "id": 20,
