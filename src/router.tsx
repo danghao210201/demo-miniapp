@@ -25,6 +25,11 @@ import GuiPhanAnh from "./pages/home/kiennghi/guiphananh";
 import PhanAnhDaGui from "./pages/home/kiennghi/phananhdagui";
 import HotelListPage from "./pages/home/hotel/list";
 import HotelDetailPage from "./pages/home/hotel/detail";
+import DuongDayNongPage from "./pages/home/hotline/list";
+import HomestayListPage from "./pages/home/homestay/list";
+import HomestayDetailPage from "./pages/home/homestay/detail";
+import LichSuVanHoaListPage from "./pages/home/lichsuvanhoa/list";
+import LichSuVanHoaDetailPage from "./pages/home/lichsuvanhoa/detail";
 
 const router = createBrowserRouter(
   [
@@ -167,12 +172,48 @@ const router = createBrowserRouter(
             noScroll: true,
           },
         },
-          {
+        {
           path: "/hotel/list",
           element: <HotelListPage />,
           handle: {
             back: true,
             title: "Khách sạn",
+            noScroll: true,
+          },
+        },
+        {
+          path: "/homestay/list",
+          element: <HomestayListPage />,
+          handle: {
+            back: true,
+            title: "Homestay",
+            noScroll: true,
+          },
+        },
+        {
+          path: "/homestay/:index",
+          element: <HomestayDetailPage />,
+          handle: {
+            back: true,
+            title: "Thông tin chi tiết",
+            noScroll: true,
+          },
+        },
+          {
+          path: "/lichsuvanhoa/list",
+          element: <LichSuVanHoaListPage />,
+          handle: {
+            back: true,
+            title: "Lịch sử - Văn hoá",
+            noScroll: true,
+          },
+        },
+        {
+          path: "/lichsuvanhoa/:index",
+          element: <LichSuVanHoaDetailPage />,
+          handle: {
+            back: true,
+            title: "Thông tin chi tiết",
             noScroll: true,
           },
         },
@@ -224,7 +265,15 @@ const router = createBrowserRouter(
             noScroll: true,
           },
         },
-
+        {
+          path: "/hotline/list",
+          element: <DuongDayNongPage />,
+          handle: {
+            back: true,
+            title: "Đường dây nóng",
+            noScroll: true,
+          },
+        },
       ],
       ErrorBoundary,
     },

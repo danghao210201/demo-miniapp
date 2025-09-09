@@ -2,11 +2,11 @@ import React, { useMemo } from "react";
 import { Text } from "zmp-ui";
 import { useParams } from "react-router-dom";
 import { openWebview } from "zmp-sdk/apis";
-import data from "@/components/mock/homestay.json";
+import data from "@/components/mock/checkinhot.json";
 
 const { Title } = Text;
 
-export default function HomestayDetailPage() {
+export default function LichSuVanHoaDetailPage() {
   // Lấy chỉ số nhà hàng từ URL, mặc định 0 nếu không có
   const params = useParams();
   const index = useMemo(() => {

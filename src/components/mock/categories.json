@@ -53,14 +53,14 @@
                 "idcha": 7,
                 "name": "Homestay",
                 "icon": "/src/static/image/homestay.png",
-                "page": "/dulich/homestay"
+                "page": "/homestay/list"
             },
             {
                 "id": 11,
                 "idcha": 7,
                 "name": "Lịch sử - Văn hoá",
                 "icon": "/src/static/image/lichsu.png",
-                "page": "/dulich/diadiemdulich"
+                "page": "/lichsuvanhoa/list"
             }
         ]
     },
@@ -83,7 +83,7 @@
                 "idcha": 13,
                 "name": "Đường dây nóng",
                 "icon": "/src/static/image/hotline.png",
-                "page": "/phananhkiennghi/duongdaynong"
+                "page": "/hotline/list"
             }
         ]
     },
