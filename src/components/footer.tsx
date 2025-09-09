@@ -15,11 +15,11 @@ const NAV_ITEMS = [
     path: "/",
     icon: HomeIcon,
   },
-  {
-    name: "Khám phá",
-    path: "/explore",
-    icon: ExploreIcon,
-  },
+  // {
+  //   name: "Khám phá",
+  //   path: "/explore",
+  //   icon: ExploreIcon,
+  // },
   {
     path: "/booking",
     icon: () => (
