@@ -1,0 +1,54 @@
+[
+  {
+    "phong": "Phòng Một cửa",
+    "linh_vuc": "Dịch vụ công trực tuyến",
+    "noi_dung": [
+      "Hướng dẫn người dân nộp hồ sơ trực tuyến, thanh toán trực tuyến",
+      "Tra cứu tình trạng hồ sơ",
+      "Sử dụng Cổng dịch vụ công Quốc gia và địa phương"
+    ],
+    "so_dien_thoai": "0276-1234567",
+    "dia_chi": "Bộ phận Một cửa, UBND Phường Ninh Thạnh, Tây Ninh"
+  },
+  {
+    "phong": "Văn phòng UBND",
+    "linh_vuc": "Chính quyền số – thủ tục hành chính",
+    "noi_dung": [
+      "Hỗ trợ cài đặt, sử dụng ứng dụng chính quyền điện tử (VD: Cổng DVC, SmartCity)",
+      "Phổ biến thông tin, thông báo hành chính đến người dân qua môi trường số"
+    ],
+    "so_dien_thoai": "0276-2345678",
+    "dia_chi": "UBND Phường Ninh Thạnh, Tây Ninh"
+  },
+  {
+    "phong": "Phòng Kinh tế",
+    "linh_vuc": "Kinh tế số – thương mại điện tử",
+    "noi_dung": [
+      "Hướng dẫn nông dân, tiểu thương đưa sản phẩm lên sàn thương mại điện tử (Postmart, Voso...)",
+      "Hỗ trợ tạo gian hàng online, thanh toán số, vận chuyển"
+    ],
+    "so_dien_thoai": "0276-3456789",
+    "dia_chi": "Phòng Kinh tế, UBND Phường Ninh Thạnh, Tây Ninh"
+  },
+  {
+    "phong": "Phòng Văn hóa - Thông tin",
+    "linh_vuc": "Xã hội số – truyền thông số",
+    "noi_dung": [
+      "Tuyên truyền chủ trương, chính sách bằng các nền tảng số (Zalo OA, Mini App, mạng xã hội)",
+      "Hướng dẫn người dân tiếp cận thông tin chính thống, chống tin giả"
+    ],
+    "so_dien_thoai": "0276-4567890",
+    "dia_chi": "Phòng Văn hóa - Thông tin, UBND Phường Ninh Thạnh, Tây Ninh"
+  },
+  {
+    "phong": "Phòng Công an xã",
+    "linh_vuc": "Kỹ năng số & an toàn thông tin",
+    "noi_dung": [
+      "Hướng dẫn cài đặt định danh điện tử (VNeID)",
+      "Giúp người dân sử dụng an toàn các dịch vụ số: ngân hàng, ví điện tử, mua sắm online",
+      "Phòng tránh lừa đảo qua mạng"
+    ],
+    "so_dien_thoai": "0276-5678901",
+    "dia_chi": "Công an Phường Ninh Thạnh, Tây Ninh"
+  }
+]

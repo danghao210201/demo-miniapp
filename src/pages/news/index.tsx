@@ -16,10 +16,12 @@ function NewsPage() {
   }
 
   return (
-    <div
-      className="flex w-full flex-col gap-4 p-4 text-sm leading-[150%]"
-      dangerouslySetInnerHTML={{ __html: news.content }}
-    />
+    <div className="flex w-full flex-col gap-4 p-4 text-sm leading-[150%]">
+      {/* Tiêu đề bài viết lấy từ tintuc.json */}
+      <h1 className="text-lg font-medium">{news.title}</h1>
+      {/* Nội dung HTML của bài viết */}
+      <div dangerouslySetInnerHTML={{ __html: news.content }} />
+    </div>
   );
 }
 

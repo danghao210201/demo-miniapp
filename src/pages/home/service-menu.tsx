@@ -22,6 +22,14 @@ import homestay from "../../static/image/homestay.png";
 import diadiemdulich from "../../static/image/diadiemdulich.png";
 import lichsuhinhthanh from "../../static/image/lichsuhinhthanh.png";
 import diadiem from "../../static/image/diadiem.png";
+import giaoduc from "../../static/image/giaoduc.png";
+import yte from "../../static/image/yte.png";
+import nuoc from "../../static/image/nuoc.png";
+import tocongnghe from "../../static/image/tocongnghe.png";
+import doanhnghiep from "../../static/image/doanhnghiep.png";
+import dichvu from "../../static/image/dichvu.png";
+import chinhquyen from "../../static/image/chinhquyen.png";
+import { useNavigate } from 'react-router-dom';
 
   const getImagePath = (path: string) => {
     if (path.startsWith('/src/static/image')) {
@@ -49,7 +57,14 @@ import diadiem from "../../static/image/diadiem.png";
         homestay,
         lichsuhinhthanh,
         diadiem,
-        diadiemdulich
+        diadiemdulich,
+        giaoduc,
+        yte,
+        nuoc,
+        tocongnghe,
+        doanhnghiep,
+        dichvu,
+        chinhquyen
       };
 
       return imageMap[fileName || ''] || '';
@@ -72,6 +87,8 @@ interface Category {
   name: string;
   icon: string;
   subcategories?: Subcategory[];
+  page?: string; // Trang đích nếu category điều hướng thẳng
+  url?: string;  // URL ngoài nếu muốn mở webview thẳng
 }
 
 // Component popup hiển thị subcategories
@@ -186,9 +203,29 @@ function CategoryItem({
 export default function ServiceMenu() {
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const navigate = useNavigate();
   
-  // Xử lý khi click vào category
-  const handleCategoryClick = (category: Category) => {
+  /**
+   * handleCategoryClick - Xử lý khi click vào category
+   * - Nếu có thuộc tính page => điều hướng thẳng đến trang
+   * - Nếu có url => mở trong webview
+   * - Nếu có subcategories => mở popup
+   */
+  const handleCategoryClick = async (category: Category) => {
+    if (category.page) {
+      navigate(category.page);
+      return;
+    }
+
+    if (category.url) {
+      try {
+        await openWebview({ url: category.url, config: { style: 'normal' } });
+      } catch (err) {
+        console.error('openWebview error', err);
+      }
+      return;
+    }
+
     if (category.subcategories && category.subcategories.length > 0) {
       setSelectedCategory(category);
       setIsPopupOpen(true);
@@ -207,8 +244,8 @@ export default function ServiceMenu() {
         {categoriesData.map((category) => (
           <CategoryItem 
             key={category.id}
-            category={category}
-            onClick={() => handleCategoryClick(category)}
+            category={category as Category}
+            onClick={() => handleCategoryClick(category as Category)}
           />
         ))}
       </div>

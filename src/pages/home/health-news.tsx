@@ -2,6 +2,7 @@ import Section from "@/components/section";
 import TransitionLink from "@/components/transition-link";
 import { Article } from "@/types";
 import newsData from "@/components/mock/tintuc.json";
+import { useLocation } from "react-router-dom";
 
 /**
  * Hiển thị 1 item tin tức sức khỏe.
@@ -49,12 +50,17 @@ export default function HealthNews() {
   }));
 
   const [a1, a2, a3] = mapped.slice(0, 3);
+  
+  // Ẩn tiêu đề và nút "Xem tất cả" khi đang ở trang danh mục id 12 (/home/health-news)
+  // Sử dụng useLocation để xác định đường dẫn hiện tại.
+  const location = useLocation();
+  const isCategoryPage = location.pathname === "/home/health-news";
 
   return (
     <Section
       className="py-4 space-y-3"
-      title="Tin tức"
-      viewMore="/explore"
+      title={isCategoryPage ? undefined : "Thông tin từ chính quyền"}
+      viewMore={isCategoryPage ? undefined : "/explore"}
     >
       {a1 && <NewsItem {...a1} />}
       {a2 && <NewsItem {...a2} />}

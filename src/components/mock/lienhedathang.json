@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "sanPhamId": 1,
+    "tenCuaHang": "Cửa hàng Muối tôm Tây Ninh",
+    "soDienThoai": "0276.123.4567",
+    "diaChi": "123 Đường Cách Mạng Tháng 8, TP. Tây Ninh, Tây Ninh",
+    "gioMoCua": "7:00 - 19:00",
+    "moTa": "Chuyên cung cấp muối tôm Tây Ninh chính gốc, đảm bảo chất lượng"
+  },
+  {
+    "id": 2,
+    "sanPhamId": 2,
+    "tenCuaHang": "Nem bưởi chay Trảng Bàng",
+    "soDienThoai": "0276.234.5678",
+    "diaChi": "456 Đường Trần Hưng Đạo, Trảng Bàng, Tây Ninh",
+    "gioMoCua": "6:00 - 18:00",
+    "moTa": "Nem bưởi chay truyền thống, làm thủ công theo công thức gia truyền"
+  },
+  {
+    "id": 3,
+    "sanPhamId": 3,
+    "tenCuaHang": "Mắm chua Tây Ninh",
+    "soDienThoai": "0276.345.6789",
+    "diaChi": "789 Đường Lê Lợi, TP. Tây Ninh, Tây Ninh",
+    "gioMoCua": "8:00 - 17:00",
+    "moTa": "Mắm chua lên men tự nhiên, không chất bảo quản"
+  },
+  {
+    "id": 4,
+    "sanPhamId": 4,
+    "tenCuaHang": "Bánh tráng phơi sương Trảng Bàng",
+    "soDienThoai": "0276.456.7890",
+    "diaChi": "321 Đường Nguyễn Trãi, Trảng Bàng, Tây Ninh",
+    "gioMoCua": "5:00 - 16:00",
+    "moTa": "Bánh tráng phơi sương truyền thống, làm từ gạo tẻ ngon nhất"
+  },
+  {
+    "id": 5,
+    "sanPhamId": 5,
+    "tenCuaHang": "Mãng cầu núi Bà Đen",
+    "soDienThoai": "0276.567.8901",
+    "diaChi": "654 Đường Hùng Vương, Núi Bà Đen, Tây Ninh",
+    "gioMoCua": "6:00 - 18:00",
+    "moTa": "Mãng cầu tươi ngon từ vườn núi Bà Đen, thu hoạch hàng ngày"
+  },
+  {
+    "id": 6,
+    "sanPhamId": 6,
+    "tenCuaHang": "Rượu mãng cầu Tây Ninh",
+    "soDienThoai": "0276.678.9012",
+    "diaChi": "987 Đường Phạm Văn Đồng, TP. Tây Ninh, Tây Ninh",
+    "gioMoCua": "9:00 - 20:00",
+    "moTa": "Rượu mãng cầu lên men truyền thống, độ cồn vừa phải"
+  }
+]

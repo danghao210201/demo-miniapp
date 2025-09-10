@@ -1,0 +1,37 @@
+[
+  {
+    "id": 0,
+    "name": "Tất cả",
+    "image": "https://cdn-icons-png.freepik.com/512/9535/9535223.png"
+  },
+  {
+    "id": 1,
+    "name": "Muối tôm",
+    "image": "https://i2.ex-cdn.com/crystalbay.com/files/content/2024/11/20/muoi-tom-tay-ninh-2-1458.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Nem bưởi",
+    "image": "https://i2.ex-cdn.com/crystalbay.com/files/content/2025/03/05/nem-buoi-tay-ninh-0916.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Mắm chua",
+    "image": "https://i2.ex-cdn.com/crystalbay.com/files/content/2025/04/04/mam-chua-tay-ninh-3-1623.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Bánh tráng",
+    "image": "https://badenmountain.sunworld.vn/wp-content/uploads/2024/01/banh-trang-phoi-suong-tay-ninh-15.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Mãng cầu",
+    "image": "https://imgcdn.tapchicongthuong.vn/thumb/w_1920/tcct-media/23/10/6/nuc-tieng-san-vat-mang-cau-ba-den_651fc5faeaa0a.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Rượu mãng cầu",
+    "image": "https://vuonamthuc7sang.com/upload/filemanager/files/z6520886944229_695a8826b3e8d95f66823fb8256d1e3a.jpg"
+  }
+]

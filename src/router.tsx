@@ -32,6 +32,9 @@ import LichSuVanHoaListPage from "./pages/home/lichsuvanhoa/list";
 import LichSuVanHoaDetailPage from "./pages/home/lichsuvanhoa/detail";
 import YTePage from "./pages/home/dichvuthietyeu/yte";
 import GiaoDucPage from "./pages/home/dichvuthietyeu/giaoduc";
+import HTXListPage from "./pages/home/dichvuthietyeu/hoptacxa/list";
+import HealthNews, { NewsItem } from "./pages/home/health-news";
+import ToCongNgheSoList from "./pages/home/dichvuthietyeu/tocongngheso/list";
 
 const router = createBrowserRouter(
   [
@@ -141,7 +144,7 @@ const router = createBrowserRouter(
           element: <NewsPage />,
           handle: {
             back: true,
-            title: "Tin tức",
+            title: "Chi tiết",
           },
         },
         {
@@ -291,6 +294,33 @@ const router = createBrowserRouter(
           handle: {
             back: true,
             title: "Giáo dục",
+            noScroll: true,
+          },
+        },
+          {
+          path: "/dichvuthietyeu/hoptacxa",
+          element: <HTXListPage />,
+          handle: {
+            back: true,
+            title: "Doanh nghiệp hợp tác xã",
+            noScroll: true,
+          },
+        },
+         {
+          path: "/dichvuthietyeu/tocongngheso",
+          element: <ToCongNgheSoList />,
+          handle: {
+            back: true,
+            title: "Tổ công nghệ số cộng đồng",
+            noScroll: true,
+          },
+        },
+           {
+          path: "/home/health-news",
+          element: <HealthNews />,
+          handle: {
+            back: true,
+            title: "Thông tin từ chính quyền",
             noScroll: true,
           },
         },

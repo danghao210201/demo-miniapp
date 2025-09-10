@@ -4,14 +4,16 @@ import clipboard from "@/static/services/clipboard.svg";
 import pill from "@/static/services/pill.svg";
 import stethoscope from "@/static/services/stethoscope.svg";
 import { openWebview } from "zmp-sdk/apis";
-
+import hocphi from "@/static/image/hocphi.png";
+import solienlac from "@/static/image/solienlac.png" 
+import tuyensinh from "@/static/image/tuyensinh.png" 
 function GiaoDucPage() {
   return (
     <div className="py-3 px-3 space-y-4">
       <MarkedTitleSection title="Danh mục">
         <div className="grid grid-cols-3 px-5 gap-x-3 gap-y-8">
           <ServiceItem
-            icon={clipboard}
+            icon={hocphi}
             label="Thanh toán học phí"
             onClick={() =>
               openWebview({
@@ -22,7 +24,7 @@ function GiaoDucPage() {
           />
           {/* Không thay đổi 2 mục còn lại theo yêu cầu */}
           <ServiceItem
-            icon={pill}
+            icon={solienlac}
             label="Sổ liên lạc điện tử"
            onClick={() =>
               openWebview({
@@ -32,7 +34,7 @@ function GiaoDucPage() {
             }
           />
           <ServiceItem
-            icon={stethoscope}
+            icon={tuyensinh}
             label="Tuyển sinh"
              onClick={() =>
               openWebview({

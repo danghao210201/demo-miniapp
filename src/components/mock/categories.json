@@ -64,7 +64,12 @@
             }
         ]
     },
-  
+    {
+        "id": 12,
+        "name": "Thông tin từ chính quyền",
+        "icon": "/src/static/image/chinhquyen.png",
+        "page": "/home/health-news"
+    },
     {
         "id": 13,
         "name": "Kiến nghị - Phản ánh",
@@ -90,20 +95,20 @@
     {
         "id": 16,
         "name": "Dịch vụ thiết yếu",
-        "icon": "/src/static/image/phananh.png",
+        "icon": "/src/static/image/dichvu.png",
         "subcategories": [
             {
                 "id": 17,
                 "idcha": 16,
                 "name": "Dịch vụ y tế",
-                "icon": "/src/static/image/phananh.png",
+                "icon": "/src/static/image/yte.png",
                 "page": "/dichvuthietyeu/yte"
             },
             {
                 "id": 18,
                 "idcha": 16,
                 "name": "Dịch vụ nước",
-                "icon": "/src/static/image/hotline.png",
+                "icon": "/src/static/image/nuoc.png",
                 "page": "",
                 "url": "https://www.vban.vn/dich-vu/thanh-toan-hoa-don-nuoc-online.aspx"
 
@@ -112,28 +117,30 @@
                 "id": 19,
                 "idcha": 16,
                 "name": "Giáo dục",
-                "icon": "/src/static/image/hotline.png",
+                "icon": "/src/static/image/giaoduc.png",
                 "page": "/dichvuthietyeu/giaoduc"
             },
              {
                 "id": 20,
                 "idcha": 16,
                 "name": "Tổ công nghệ số cộng đồng",
-                "icon": "/src/static/image/hotline.png",
-                "page": "/phananhkiennghi/duongdaynong"
+                "icon": "/src/static/image/tocongnghe.png",
+                "page": "/dichvuthietyeu/tocongngheso"
             },
               {
                 "id": 21,
                 "idcha": 16,
                 "name": "Doanh nghiệp hợp tác xã",
-                "icon": "/src/static/image/hotline.png",
-                "page": "/phananhkiennghi/duongdaynong"
+                "icon": "/src/static/image/doanhnghiep.png",
+                "page": "/dichvuthietyeu/hoptacxa"
             }
         ]
     },
+      
       {
-        "id": 12,
+        "id": 13,
         "name": "Sản phẩm OCOP",
-        "icon": "/src/static/image/sanpham.png"
+        "icon": "/src/static/image/sanpham.png",
+        "page":"/sanpham"
     }
 ]
