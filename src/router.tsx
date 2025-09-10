@@ -35,6 +35,9 @@ import GiaoDucPage from "./pages/home/dichvuthietyeu/giaoduc";
 import HTXListPage from "./pages/home/dichvuthietyeu/hoptacxa/list";
 import HealthNews, { NewsItem } from "./pages/home/health-news";
 import ToCongNgheSoList from "./pages/home/dichvuthietyeu/tocongngheso/list";
+import ListSanPhamPage from "./pages/home/sanpham/listsanpham";
+import DetailSanPhamPage from "./pages/home/sanpham/detailsanpham";
+import TabList from "./pages/home/bocso/danhsach/tablist";
 
 const router = createBrowserRouter(
   [
@@ -204,7 +207,7 @@ const router = createBrowserRouter(
             noScroll: true,
           },
         },
-          {
+        {
           path: "/lichsuvanhoa/list",
           element: <LichSuVanHoaListPage />,
           handle: {
@@ -288,7 +291,7 @@ const router = createBrowserRouter(
             noScroll: true,
           },
         },
-         {
+        {
           path: "/dichvuthietyeu/giaoduc",
           element: <GiaoDucPage />,
           handle: {
@@ -297,7 +300,7 @@ const router = createBrowserRouter(
             noScroll: true,
           },
         },
-          {
+        {
           path: "/dichvuthietyeu/hoptacxa",
           element: <HTXListPage />,
           handle: {
@@ -306,7 +309,7 @@ const router = createBrowserRouter(
             noScroll: true,
           },
         },
-         {
+        {
           path: "/dichvuthietyeu/tocongngheso",
           element: <ToCongNgheSoList />,
           handle: {
@@ -315,12 +318,39 @@ const router = createBrowserRouter(
             noScroll: true,
           },
         },
-           {
+        {
           path: "/home/health-news",
           element: <HealthNews />,
           handle: {
             back: true,
             title: "Thông tin từ chính quyền",
+            noScroll: true,
+          },
+        },
+          {
+          path: "/sanpham",
+          element: <ListSanPhamPage />,
+          handle: {
+            back: true,
+            title: "Sản phẩm địa phương",
+            noScroll: true,
+          },
+        },
+        {
+          path: "/sanpham/:id",
+          element: <DetailSanPhamPage />,
+          handle: {
+            back: true,
+            title: "Chi tiết sản phẩm",
+            noScroll: true,
+          },
+        },
+          {
+          path: "/bocso/danhsach",
+          element: <TabList />,
+          handle: {
+            back: true,
+            title: "Bốc số từ xa",
             noScroll: true,
           },
         },

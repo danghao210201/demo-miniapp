@@ -25,7 +25,7 @@
                 "idcha": 1,
                 "name": "Bốc số từ xa",
                 "icon": "/src/static/image/bocso.png",
-                "url": "https://demo6.tayninh.gov.vn/frontend/kiosk4/23"
+                "page":"/bocso/danhsach"
             }
         ]
     },
