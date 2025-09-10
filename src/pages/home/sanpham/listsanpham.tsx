@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import categories from "@/components/mock/danhmucsanpham.json";
 import products from "@/components/mock/sanpham.json";
 import contacts from "@/components/mock/lienhedathang.json";
+import SearchInput from "@/components/form/search";
 
 // Kiểu dữ liệu
 interface Category {
@@ -97,20 +98,12 @@ export default function ListSanPhamPage() {
       <div className="px-4">
         {/* Thanh tìm kiếm */}
         <div className="relative">
-          <input
+          <SearchInput
+            className="m-0"
             value={keyword}
-            onChange={(e) => setKeyword(e.target.value)}
-            placeholder="Bạn muốn mua gì..."
-            className="w-full rounded-full bg-white h-10 pl-10 pr-4 text-sm placeholder:text-gray-400 shadow-sm focus:outline-none"
+            onChange={(e) => setKeyword(e.currentTarget.value)}
+            placeholder="Bạn muốn mua gì?"
           />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2"
-          >
-            <path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm11 18.59L18.42 18a10 10 0 1 0-1.41 1.41L19.59 22 21 20.59z" />
-          </svg>
         </div>
 
         {/* Chips danh mục */}
@@ -121,9 +114,8 @@ export default function ListSanPhamPage() {
               <button
                 key={c.id}
                 onClick={() => setActiveCate(c.id)}
-                className={`flex items-center gap-2 shrink-0 rounded-full px-3 py-1.5 text-sm transition-colors ${
-                  active ? "bg-green-500/90 text-white" : "bg-white text-primary shadow" 
-                }`}
+                className={`flex items-center gap-2 shrink-0 rounded-full px-3 py-1.5 text-sm transition-colors ${active ? "bg-green-500/90 text-white" : "bg-white text-primary shadow"
+                  }`}
               >
                 <span className="w-6 h-6 rounded-full overflow-hidden bg-white/80 ring-1 ring-white/50">
                   <img src={c.image} alt={c.name} className="w-full h-full object-cover" />

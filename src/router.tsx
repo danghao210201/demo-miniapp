@@ -38,6 +38,7 @@ import ToCongNgheSoList from "./pages/home/dichvuthietyeu/tocongngheso/list";
 import ListSanPhamPage from "./pages/home/sanpham/listsanpham";
 import DetailSanPhamPage from "./pages/home/sanpham/detailsanpham";
 import TabList from "./pages/home/bocso/danhsach/tablist";
+import DacSanDetailPage from "./pages/home/dacsan/detail";
 
 const router = createBrowserRouter(
   [
@@ -148,6 +149,7 @@ const router = createBrowserRouter(
           handle: {
             back: true,
             title: "Chi tiết",
+            showFooter: true,
           },
         },
         {
@@ -169,6 +171,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Nhà hàng",
             noScroll: true,
+            showFooter: true,
           },
         },
         {
@@ -178,6 +181,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Thông tin chi tiết",
             noScroll: true,
+            showFooter: true,
           },
         },
         {
@@ -187,6 +191,17 @@ const router = createBrowserRouter(
             back: true,
             title: "Khách sạn",
             noScroll: true,
+            showFooter: true,
+          },
+        },
+         {
+          path: "/hotel/:index",
+          element: <HotelDetailPage />,
+          handle: {
+            back: true,
+            title: "Thông tin chi tiết",
+            noScroll: true,
+            showFooter: true,
           },
         },
         {
@@ -196,6 +211,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Homestay",
             noScroll: true,
+            showFooter: true,
           },
         },
         {
@@ -205,6 +221,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Thông tin chi tiết",
             noScroll: true,
+            showFooter: true,
           },
         },
         {
@@ -214,6 +231,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Lịch sử - Văn hoá",
             noScroll: true,
+            showFooter: true,
           },
         },
         {
@@ -223,17 +241,20 @@ const router = createBrowserRouter(
             back: true,
             title: "Thông tin chi tiết",
             noScroll: true,
+            showFooter: true,
           },
         },
         {
-          path: "/hotel/:index",
-          element: <HotelDetailPage />,
+          path: "/dacsan/:index",
+          element: <DacSanDetailPage />,
           handle: {
             back: true,
             title: "Thông tin chi tiết",
             noScroll: true,
+            showFooter: true,
           },
         },
+        
         {
           path: "/kiennghi/danhsachphananh",
           element: <DanhSachPhanAnh />,
@@ -241,6 +262,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Kiến nghị - Phản ánh",
             noScroll: true,
+            showFooter: true,
           },
         },
 
@@ -251,6 +273,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Chi tiết",
             noScroll: true,
+            showFooter: true,
           },
         },
 
@@ -261,6 +284,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Gửi Kiến nghị - Phản ánh",
             noScroll: true,
+            showFooter: true,
           },
         },
 
@@ -271,6 +295,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Kiến nghị - Phản ánh đã gửi",
             noScroll: true,
+            showFooter: true,
           },
         },
         {
@@ -280,6 +305,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Đường dây nóng",
             noScroll: true,
+            showFooter: true,
           },
         },
         {
@@ -289,6 +315,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Dịch vụ y tế",
             noScroll: true,
+            showFooter: true,
           },
         },
         {
@@ -298,6 +325,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Giáo dục",
             noScroll: true,
+            showFooter: true,
           },
         },
         {
@@ -307,6 +335,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Doanh nghiệp hợp tác xã",
             noScroll: true,
+            showFooter: true,
           },
         },
         {
@@ -316,6 +345,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Tổ công nghệ số cộng đồng",
             noScroll: true,
+            showFooter: true,
           },
         },
         {
@@ -325,6 +355,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Thông tin từ chính quyền",
             noScroll: true,
+            showFooter: true,
           },
         },
           {
@@ -334,6 +365,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Sản phẩm địa phương",
             noScroll: true,
+            showFooter: false,
           },
         },
         {
@@ -343,6 +375,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Chi tiết sản phẩm",
             noScroll: true,
+            showFooter: false,
           },
         },
           {
@@ -352,6 +385,7 @@ const router = createBrowserRouter(
             back: true,
             title: "Bốc số từ xa",
             noScroll: true,
+            showFooter: true,
           },
         },
       ],

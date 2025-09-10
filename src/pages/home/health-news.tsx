@@ -60,7 +60,7 @@ export default function HealthNews() {
     <Section
       className="py-4 space-y-3"
       title={isCategoryPage ? undefined : "Thông tin từ chính quyền"}
-      viewMore={isCategoryPage ? undefined : "/explore"}
+      viewMore={isCategoryPage ? undefined : "/home/health-news"}
     >
       {a1 && <NewsItem {...a1} />}
       {a2 && <NewsItem {...a2} />}

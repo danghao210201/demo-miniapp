@@ -11,12 +11,23 @@ import FooterWave from "./icons/footer-wave";
 import { Icon } from "zmp-ui";
 import NotifiIcon from "./icons/notifi";
 import { openProfile } from "zmp-sdk";
+import { openWebview } from "zmp-sdk/apis";
 
 const handleOpenProfile = async () => {
   try {
     await openProfile({
       type: "oa",
       id: "3940546633955322358",
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const handleOpenThongBao = async () => {
+  try {
+    await openWebview({
+      url: "https://rd.zapps.vn/articles?pageId=3940546633955322358",
     });
   } catch (error) {
     console.log(error);
@@ -31,7 +42,7 @@ const NAV_ITEMS = [
   },  
   {
     name: "Chat OA",
-    path: "/c",
+    path: "/chat",
     icon: ChatIcon,
     // Khi click, mở OA thay vì điều hướng trang
     onClick: (e: React.MouseEvent) => {
@@ -42,8 +53,12 @@ const NAV_ITEMS = [
  
   {
     name: "Thông báo",
-    path: "/t",
-    icon: NotifiIcon
+    path: "/thongbao",
+    icon: NotifiIcon,
+     onClick: (e: React.MouseEvent) => {
+      e.preventDefault();
+      handleOpenThongBao();
+    },
   },
   // {
   //   name: "Khám phá",
@@ -71,7 +86,8 @@ const NAV_ITEMS = [
 
 export default function Footer() {
   const [handle] = useRouteHandle();
-  if (handle.back) {
+  // Ẩn Footer nếu có cờ hideFooter, hoặc nếu có back nhưng KHÔNG bật showFooter
+  if (handle.hideFooter || (handle.back && !handle.showFooter)) {
     return <></>;
   }
 

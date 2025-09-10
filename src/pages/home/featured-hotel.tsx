@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useNavigate } from "react-router-dom";
 const { Title } = Text;
 
 /**
@@ -16,12 +17,13 @@ const { Title } = Text;
 export default function FeaturedHotel() {
   // Lấy 4 địa danh đầu tiên để hiển thị
   const featuredSites = checkInHotData.slice(0, 4);
+  const navigate = useNavigate();
 
   return (
     <Section
       className="pt-5"
       title="Khách sạn - Homestay"
-      viewMore="/services"
+      viewMore="/hotel/list"
     >
       <br/>
       <Swiper
@@ -35,7 +37,7 @@ export default function FeaturedHotel() {
       >
         {featuredSites.map((site, index) => (
           <SwiperSlide key={index}>
-            <div className="relative rounded-xl overflow-hidden">
+            <div onClick={() => navigate(`/hotel/${index}`)} className="relative rounded-xl overflow-hidden cursor-pointer">
               <div className="aspect-[16/9] relative w-full">
                 <img
                   src={site.HinhAnh[0]}

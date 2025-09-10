@@ -24,6 +24,11 @@ export function useRealHeight(
   return height;
 }
 
+/**
+ * useRouteHandle
+ * - Trả về handle của route hiện tại cùng với match và danh sách matches
+ * - Hỗ trợ thêm cờ showFooter/hideFooter để điều khiển hiển thị Footer theo route
+ */
 export function useRouteHandle() {
   const matches = useMatches() as UIMatch<
     undefined,
@@ -33,6 +38,8 @@ export function useRouteHandle() {
       scrollRestoration?: number;
       noScroll?: boolean;
       profile?: boolean;
+      showFooter?: boolean; // bật Footer bắt buộc cho route này
+      hideFooter?: boolean; // ẩn Footer bắt buộc cho route này
     }
   >[];
   const lastMatch = matches[matches.length - 1];

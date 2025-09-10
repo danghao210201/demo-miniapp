@@ -260,12 +260,12 @@ function TicketList() {
 
       {/* Header hiển thị quầy được chọn */}
       <div className="flex justify-center gap-6">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mt-4">
           <div style={{ backgroundColor: "#00885F" }} className="w-4 h-4 bg-green-500 rounded"></div>
 
           <Text className="text-sm text-gray-700">Đang phục vụ</Text>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mt-4">
           <div className="w-4 h-4 bg-blue-200 rounded"></div>
           <Text className="text-sm text-gray-700">Đang chờ</Text>
         </div>
