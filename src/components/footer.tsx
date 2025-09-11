@@ -10,20 +10,31 @@ import { useRouteHandle } from "@/hooks";
 import FooterWave from "./icons/footer-wave";
 import { Icon } from "zmp-ui";
 import NotifiIcon from "./icons/notifi";
-import { openProfile } from "zmp-sdk";
-import { openWebview } from "zmp-sdk/apis";
+import { openWebview, openChat } from "zmp-sdk/apis";
 
-const handleOpenProfile = async () => {
+/**
+ * Mở màn hình chat với OA bằng API Zalo Mini App.
+ * - Nếu chạy ngoài môi trường Zalo hoặc API thất bại, fallback mở trang OA trên web.
+ */
+const handleOpenOAChat = async () => {
   try {
-    await openProfile({
+    await openChat({
       type: "oa",
       id: "3940546633955322358",
     });
   } catch (error) {
     console.log(error);
+    try {
+      await openWebview({ url: "https://zalo.me/3940546633955322358" });
+    } catch (e) {
+      console.log(e);
+    }
   }
 };
 
+/**
+ * Mở trang thông báo OA qua webview.
+ */
 const handleOpenThongBao = async () => {
   try {
     await openWebview({
@@ -35,27 +46,27 @@ const handleOpenThongBao = async () => {
 };
 
 const NAV_ITEMS = [
-   {
+  {
     name: "Trang chủ",
     path: "/",
     icon: HomeIcon,
-  },  
+  },
   {
     name: "Chat OA",
-    path: "/chat",
+    path: "/chat-oa",
     icon: ChatIcon,
     // Khi click, mở OA thay vì điều hướng trang
     onClick: (e: React.MouseEvent) => {
       e.preventDefault();
-      handleOpenProfile();
+      handleOpenOAChat();
     },
   },
- 
+
   {
     name: "Thông báo",
     path: "/thongbao",
     icon: NotifiIcon,
-     onClick: (e: React.MouseEvent) => {
+    onClick: (e: React.MouseEvent) => {
       e.preventDefault();
       handleOpenThongBao();
     },
@@ -79,7 +90,7 @@ const NAV_ITEMS = [
   // },
   {
     name: "Cá nhân",
-    path: "/profile",
+    path: "/home/profile",
     icon: ProfileIcon,
   },
 ];

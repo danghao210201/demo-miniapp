@@ -39,6 +39,7 @@ import ListSanPhamPage from "./pages/home/sanpham/listsanpham";
 import DetailSanPhamPage from "./pages/home/sanpham/detailsanpham";
 import TabList from "./pages/home/bocso/danhsach/tablist";
 import DacSanDetailPage from "./pages/home/dacsan/detail";
+import ProfileHomePage from "./pages/home/profile";
 
 const router = createBrowserRouter(
   [
@@ -194,7 +195,7 @@ const router = createBrowserRouter(
             showFooter: true,
           },
         },
-         {
+        {
           path: "/hotel/:index",
           element: <HotelDetailPage />,
           handle: {
@@ -254,7 +255,7 @@ const router = createBrowserRouter(
             showFooter: true,
           },
         },
-        
+
         {
           path: "/kiennghi/danhsachphananh",
           element: <DanhSachPhanAnh />,
@@ -358,7 +359,7 @@ const router = createBrowserRouter(
             showFooter: true,
           },
         },
-          {
+        {
           path: "/sanpham",
           element: <ListSanPhamPage />,
           handle: {
@@ -378,12 +379,22 @@ const router = createBrowserRouter(
             showFooter: false,
           },
         },
-          {
+        {
           path: "/bocso/danhsach",
           element: <TabList />,
           handle: {
             back: true,
             title: "Bốc số từ xa",
+            noScroll: true,
+            showFooter: true,
+          },
+        },
+         {
+          path: "/home/profile",
+          element: <ProfileHomePage />,
+          handle: {
+            back: true,
+            title: "Cá nhân",
             noScroll: true,
             showFooter: true,
           },

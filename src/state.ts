@@ -35,7 +35,7 @@ import {
 } from "./utils/mock";
 import { getUserInfo } from "zmp-sdk";
 import { toLowerCaseNonAccentVietnamese, wait } from "./utils/miscellaneous";
-import { NotifiableError } from "./utils/errors";
+// import { NotifiableError } from "./utils/errors";
 
 /**
  * Listings
@@ -147,13 +147,17 @@ export const searchResultState = atomFamily((keyword: string) =>
   )
 );
 
+/**
+ * Trạng thái thông tin người dùng.
+ * - Nếu đã cấp quyền (scope.userInfo), trả về thông tin người dùng (name, avatar...).
+ * - Nếu CHƯA cấp quyền, không ném lỗi mà trả về `{ userInfo: {} }` để UI có thể hiển thị nút xin quyền.
+ */
 export const userState = atomWithRefresh(() => {
   return getUserInfo({
     avatarType: "normal",
   }).catch(() => {
-    throw new NotifiableError(
-      "Vui lòng cho phép truy cập tên và ảnh đại diện!"
-    );
+    // Khi người dùng chưa cấp quyền, trả về dữ liệu rỗng để UI có thể hiển thị nút xin quyền
+    return { userInfo: {} as any } as any;
   });
 });
 
